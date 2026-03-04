@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "GilroyBold";
+  src: url("/Fonts/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("/Fonts/Gilroy-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GilroyMedium";
+  src: url("/Fonts/Gilroy-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GilroyRegular";
+  src: url("/Fonts/Gilroy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LufgaMedium";
+  src: url("/Fonts/lufga-medium.otf") format("truetype");
+}
+
+
+.font-gilroy-light {
+  font-family: "GilroyLight", sans-serif;
+}
+
+.font-gilroy-bold {
+  font-family: "GilroyBold", sans-serif;
+}
+
+.font-lufga-medium {
+  font-family: "LufgaMedium", sans-serif;
 }
