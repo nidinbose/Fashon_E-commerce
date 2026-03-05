@@ -52,10 +52,10 @@ export default function Navbar(){
   return (
     <nav className="w-full fixed top-0 left-0 z-50">
 
-      <div className=" mx-auto flex items-center justify-between px-6 py-4 bg-black/30">
+      <div className=" mx-auto flex items-center justify-between px-2 md:px-6 py-4 bg-black/30">
 
         {/* LOGO */}
-        <h1 className="text-2xl 
+        <h1 className="text-3xl 
         bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
         bg-clip-text text-transparent font-lufga-regular">
           Arrowfly
@@ -68,9 +68,9 @@ export default function Navbar(){
           <a>Contact</a>
       </div>
         {/* DESKTOP MENU */}
-        <div className=" gap-8 text-gray-700 font-medium">
+        <div className=" gap-2 md:gap-8 text-gray-700 font-medium">
 
-      <div className="flex gap-3">
+      <div className="flex gap-2 md:gap-3">
         <IoIosSearch className="w-8 h-6 text-white"/>
         <FiUser className="w-8 h-6 text-white"/>
         <BsBag className="w-8 h-6 text-white"/>

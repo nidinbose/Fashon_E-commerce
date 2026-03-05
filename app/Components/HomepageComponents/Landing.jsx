@@ -21,7 +21,7 @@ export default function Landing() {
         {/* CENTER BIG TEXT */}
         <div className="absolute bottom-10 right-6 md:right-16">
 
-          <h1 className="font-serif text-[100px] sm:text-[150px] md:text-[250px] lg:text-[300px] leading-none tracking-tight">
+          <h1 className="font-serif text-[80px] sm:text-[130px] md:text-[150px] lg:text-[200px] leading-none tracking-tight">
             Arrow<span className="italic  bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
         bg-clip-text text-transparent">f</span>ly
           </h1>
@@ -29,19 +29,6 @@ export default function Landing() {
         </div>
 
 
-        {/* LEFT CONTENT */}
-        <div className="max-w-sm space-y-6">
-
-          <p className="text-sm md:text-base leading-relaxed text-gray-200">
-            Explore our curated collection of premium fashion collection,
-            crafted to perfection.
-          </p>
-
-          <button className="flex items-center gap-3 border border-white px-6 py-3 hover:bg-white hover:text-black transition">
-            Explore More →
-          </button>
-
-        </div>
 
       </div>
 
