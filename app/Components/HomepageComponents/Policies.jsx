@@ -55,7 +55,7 @@ export default function Policies() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="container mx-auto px-6"
+        className=" mx-auto px-6"
       >
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">

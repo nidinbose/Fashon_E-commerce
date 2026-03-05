@@ -45,13 +45,13 @@ const card = {
 
 export default function ShopByCategory() {
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="mx-auto px-6 py-20">
 
 
       <div className="mb-10">
         <p className="text-gray-500 font-lufga-light">Shop By</p>
 
-        <h2 className="text-6xl font-gilroy-regular inline bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent -mt-3">
+        <h2 className=" text-4xl md:text-6xl font-gilroy-regular inline bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent -mt-3">
           Category
         </h2>
       </div>

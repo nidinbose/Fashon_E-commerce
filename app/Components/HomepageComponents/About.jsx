@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className=" text-white py-20 px-6">
 
-      <div className="max-w-7xl mx-auto">
+      <div className=" mx-auto">
 
         {/* TITLE */}
         <h2 className="text-center text-4xl text-black md:text-5xl font-gilroy-regular mb-16">

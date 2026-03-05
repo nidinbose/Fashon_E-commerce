@@ -32,10 +32,7 @@ export default function Textcarosal() {
           {items.map((text, index) => (
             <div key={index} className="flex items-center gap-6">
 
-              <LuSparkle
-                size={18}
-                className="text-[#4C11CE]"
-              />
+           <h1 className="text-4xl  bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent font-gilroy-regular  ">✧</h1>
 
               <span className="text-xl md:text-xl xl:text-2xl font-gilroy-regular tracking-wide">
                 {text}

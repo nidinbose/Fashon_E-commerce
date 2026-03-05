@@ -4,6 +4,8 @@ import About from "../HomepageComponents/About"
 import Adslanding from "../HomepageComponents/Adslanding"
 import Landing from "../HomepageComponents/Landing"
 import LandingProducts from "../HomepageComponents/LandingProducts"
+import LimitedStock from "../HomepageComponents/LimitedStock"
+import MostFavourite from "../HomepageComponents/MostFavourite"
 import Policies from "../HomepageComponents/Policies"
 import Textcarosal from "../HomepageComponents/Textcarosal"
 
@@ -15,7 +17,10 @@ export default function Homepage(){
           <LandingProducts/>
           <Adslanding/>
           <Policies/>
+          <MostFavourite/>
           <About/>
+           <LimitedStock/>
+          
         </div>
     )
 }

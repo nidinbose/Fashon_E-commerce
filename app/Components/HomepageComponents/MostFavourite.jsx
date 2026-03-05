@@ -1,3 +1,4 @@
+
 'use client'
 
 import { motion } from "framer-motion";
@@ -32,7 +33,7 @@ price:"3000"
 }
 ]
 
-export default function LandingProducts() {
+export default function MostFavourite() {
 
 return (
 
@@ -44,7 +45,7 @@ animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
 className="font-lufga-regular text-3xl md:text-6xl py-5 "
 >
-New <span className=" bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">arrivals</span>
+Most<span className=" bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Favourite</span>
 </motion.h1>
 
 <motion.p
