@@ -40,9 +40,26 @@ body {
   src: url("/Fonts/Gilroy-Regular.ttf") format("truetype");
 }
 
+
+@font-face {
+  font-family: "LufgaBold";
+  src: url("/Fonts/lufga-bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "LufgaLight";
+  src: url("/Fonts/lufga-light.otf") format("truetype");
+}
+
+
 @font-face {
   font-family: "LufgaMedium";
   src: url("/Fonts/lufga-medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "LufgaRegular";
+  src: url("/Fonts/lufga-regular.otf") format("truetype");
 }
 
 
@@ -54,6 +71,24 @@ body {
   font-family: "GilroyBold", sans-serif;
 }
 
+.font-gilroy-medium {
+  font-family: "GilroyMedium", sans-serif;
+}
+
+.font-gilroy-regular {
+  font-family: "GilroyRegular", sans-serif;
+}
+
+.font-lufga-bold {
+  font-family: "LufgaBold", sans-serif;
+}
+
+.font-lufga-light {
+  font-family: "LufgaLight", sans-serif;
+}
 .font-lufga-medium {
   font-family: "LufgaMedium", sans-serif;
+}
+.font-lufga-regular {
+  font-family: "LufgaRegular", sans-serif;
 }
