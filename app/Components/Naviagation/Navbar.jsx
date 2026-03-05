@@ -77,7 +77,7 @@ export default function Navbar(){
 
           <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
           <FiUser className="w-6 h-6 text-black cursor-pointer"/>
-          <BsBag className="w-6 h-6 text-black cursor-pointer"/>
+         <Link href="/Cart"> <BsBag className="w-6 h-6 text-black cursor-pointer"/></Link>
 
         </div>
 
