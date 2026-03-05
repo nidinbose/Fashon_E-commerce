@@ -50,10 +50,10 @@ export default function Navbar(){
 
   return (
 
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
 
       {/* TOP BAR */}
-      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+      <div className=" mx-auto flex items-center justify-between px-4 md:px-6 py-4">
 
         {/* LOGO */}
         <Link href="/">
@@ -144,7 +144,7 @@ export default function Navbar(){
                 <motion.div variants={item}>Contact</motion.div>
               </Link>
 
-              <Link href="/" onClick={closeMenu}>
+              <Link href="/Auth/Login" onClick={closeMenu}>
                 <motion.button
                   variants={item}
                   className="px-8 py-3 rounded-lg bg-white text-black text-lg"
