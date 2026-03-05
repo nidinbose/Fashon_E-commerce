@@ -3,7 +3,7 @@
 import { FcGoogle } from "react-icons/fc"
 import { FaArrowRight } from "react-icons/fa6";
 
-export default function Login(){
+export default function Register(){
   return (
     <div className="relative min-h-screen grid xl:grid-cols-2 px-6 md:px-10 lg:px-16 py-10 bg-white">
       <div className="flex flex-col justify-between">
@@ -58,9 +58,17 @@ export default function Login(){
         rounded-xl p-6 md:p-8 text-black">
 
           <h3 className="text-xl md:text-2xl font-semibold mb-6 font-lufga-regular">
-            Login to your account
+            Create your account
           </h3>
-
+         <div className=" space-y-4">
+                          <input
+            type="text"
+            placeholder="Name"
+            className="w-full px-4 py-3 rounded-lg
+            bg-black/10 border border-black/20
+            outline-none focus:border-purple-400
+            font-gilroy-regular text-sm md:text-base"
+          />
           <input
             type="email"
             placeholder="Email"
@@ -69,14 +77,32 @@ export default function Login(){
             outline-none focus:border-purple-400
             font-gilroy-regular text-sm md:text-base"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full mt-4 px-4 py-3 rounded-lg
+                                    <input
+            type="number"
+            placeholder="Phone"
+            className="w-full px-4 py-3 rounded-lg
             bg-black/10 border border-black/20
             outline-none focus:border-purple-400
             font-gilroy-regular text-sm md:text-base"
           />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full px-4 py-3 rounded-lg
+            bg-black/10 border border-black/20
+            outline-none focus:border-purple-400
+            font-gilroy-regular text-sm md:text-base"
+          />
+
+                                    <input
+            type="password"
+            placeholder="confirmPassword"
+            className="w-full px-4 py-3 rounded-lg
+            bg-black/10 border border-black/20
+            outline-none focus:border-purple-400
+            font-gilroy-regular text-sm md:text-base"
+          />
+         </div>
           <div className="flex justify-end mt-4 text-sm">
             <button className="text-gray-600 hover:text-black font-gilroy-regular">
               Forgot Password?
