@@ -1,5 +1,6 @@
 'use client'
 
+import About from "../HomepageComponents/About"
 import Adslanding from "../HomepageComponents/Adslanding"
 import Landing from "../HomepageComponents/Landing"
 import LandingProducts from "../HomepageComponents/LandingProducts"
@@ -14,6 +15,7 @@ export default function Homepage(){
           <LandingProducts/>
           <Adslanding/>
           <Policies/>
+          <About/>
         </div>
     )
 }
