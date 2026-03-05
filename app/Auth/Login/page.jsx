@@ -2,6 +2,7 @@
 
 import { FcGoogle } from "react-icons/fc"
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Login(){
   return (
@@ -89,7 +90,7 @@ export default function Login(){
             Login
           </button>
           <button className="w-full flex items-center justify-center gap-3
-          bg-white border border-black/10
+          bg-white 
           text-black py-3 rounded-lg
           mt-4 font-gilroy-regular">
             <FcGoogle size={20}/>
@@ -97,10 +98,12 @@ export default function Login(){
           </button>
           <p className="text-center text-gray-900 text-sm mt-6 font-gilroy-regular">
             Don't have an account?
+         <Link href="/Auth/Register">
             <span className="ml-2 bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
             bg-clip-text text-transparent cursor-pointer">
               Create account
             </span>
+         </Link>
           </p>
 
         </div>

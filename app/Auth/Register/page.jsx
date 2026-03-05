@@ -115,7 +115,7 @@ export default function Register(){
             Login
           </button>
           <button className="w-full flex items-center justify-center gap-3
-          bg-white border border-black/10
+          bg-white 
           text-black py-3 rounded-lg
           mt-4 font-gilroy-regular">
             <FcGoogle size={20}/>
