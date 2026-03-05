@@ -53,7 +53,7 @@ animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
 className="font-gilroy-light text-xl md:text-xl mb-10 "
 >
-jsdcnbjksdh bcnwdnbckjndwkjcnwd cbhwdbchjwdcjwdn hjdwbchwdbhc
+Unlock your potential with our quality products from <span className=" font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Arrowfly</span>
 </motion.p>
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -78,6 +78,10 @@ whileHover={{scale:1.1}}
 transition={{duration:0.4}}
 />
 
+<div className=" p-2 font-gilroy-regular absolute top-2 right-3 text-sm rounded-sm bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]">
+    <p className="text-xs text-white font-gilroy-light">limited stock</p>
+</div>
+
 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
 
 <div className="rotate-[-40deg] text-9xl font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
@@ -100,6 +104,8 @@ Price : {item.price}
 </h2>
 </div>
 
+
+
 <div className="flex gap-3 text-3xl text-black items-center">
 
 <motion.div
@@ -111,6 +117,7 @@ className="cursor-pointer"
 <BsBag />
 </motion.div>
 
+
 <motion.div
 whileHover={{ x: 10, scale: 1.2 }}
 transition={{ type: "spring", stiffness: 300 }}
@@ -118,15 +125,10 @@ className="cursor-pointer font-gilroy-light bg-gradient-to-r from-[#FF902F] via-
 >
 →
 </motion.div>
-
 </div>
-
 </div>
-
 </motion.div>
-
 ))}
-
 </div>
 
 </div>
