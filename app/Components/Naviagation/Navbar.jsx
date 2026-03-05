@@ -2,17 +2,16 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { IoIosSearch } from "react-icons/io";
-import { BsBag } from "react-icons/bs";
-import { FiUser } from "react-icons/fi";
-import Link from "next/link";
-
+import { IoIosSearch } from "react-icons/io"
+import { BsBag } from "react-icons/bs"
+import { FiUser } from "react-icons/fi"
+import Link from "next/link"
 
 export default function Navbar(){
 
-  const [open,setOpen]=useState(false)
+  const [open,setOpen] = useState(false)
 
-  const bubble={
+  const bubble = {
     hidden:{
       scale:0,
       borderRadius:"100%"
@@ -26,13 +25,11 @@ export default function Navbar(){
     },
     exit:{
       scale:0,
-      transition:{
-        duration:0.5
-      }
+      transition:{ duration:0.5 }
     }
   }
 
-  const menu={
+  const menu = {
     hidden:{opacity:0,y:40},
     visible:{
       opacity:1,
@@ -44,40 +41,45 @@ export default function Navbar(){
     }
   }
 
-  const item={
+  const item = {
     hidden:{opacity:0,y:20},
     visible:{opacity:1,y:0}
   }
 
-  return (
-    <nav className="w-full fixed top-0 left-0 z-50">
+  const closeMenu = () => setOpen(false)
 
-      <div className=" mx-auto flex items-center justify-between px-2 md:px-6 py-4 bg-black/30">
+  return (
+
+    <nav className="w-full fixed top-0 left-0 z-50 bg-white">
+
+      {/* TOP BAR */}
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-4">
 
         {/* LOGO */}
-        <h1 className="text-3xl 
-        bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
-        bg-clip-text text-transparent font-lufga-regular">
-          Arrowfly
-        </h1>
+        <Link href="/">
+          <h1 className="text-3xl bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent font-lufga-regular cursor-pointer">
+            Arrowfly
+          </h1>
+        </Link>
 
-     <div className="flex items-center hidden md:flex gap-7 font-gilroy-regular text-white">
-           <a>Home</a>
-          <a>Products</a>
-          <a>Pricing</a>
-          <a>Contact</a>
-      </div>
         {/* DESKTOP MENU */}
-        <div className=" gap-2 md:gap-8 text-gray-700 font-medium">
+        <div className="hidden md:flex gap-7 font-gilroy-regular text-black text-xl">
 
-      <div className="flex gap-2 md:gap-3">
-        <IoIosSearch className="w-8 h-6 text-white"/>
-        <FiUser className="w-8 h-6 text-white"/>
-        <BsBag className="w-8 h-6 text-white"/>
-      </div>
+          <Link href="/" onClick={closeMenu}>Home</Link>
+          <Link href="/" onClick={closeMenu}>Products</Link>
+          <Link href="/" onClick={closeMenu}>Pricing</Link>
+          <Link href="/" onClick={closeMenu}>Contact</Link>
 
         </div>
 
+        {/* RIGHT ICONS */}
+        <div className="hidden md:flex gap-4 text-gray-700">
+
+          <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
+          <FiUser className="w-6 h-6 text-black cursor-pointer"/>
+          <BsBag className="w-6 h-6 text-black cursor-pointer"/>
+
+        </div>
 
         {/* HAMBURGER */}
         <button
@@ -85,22 +87,20 @@ export default function Navbar(){
           className="md:hidden z-50 flex flex-col gap-1.5"
         >
 
-          <span className={`h-[2px] w-6 bg-white transition
+          <span className={`h-[2px] w-6 bg-black transition
           ${open && "rotate-45 translate-y-[6px]"}`}></span>
 
-          <span className={`h-[2px] w-6 bg-white transition
+          <span className={`h-[2px] w-6 bg-black transition
           ${open && "opacity-0"}`}></span>
 
-          <span className={`h-[2px] w-6 bg-white transition
+          <span className={`h-[2px] w-6 bg-black transition
           ${open && "-rotate-45 -translate-y-[6px]"}`}></span>
 
         </button>
 
       </div>
 
-
-
-      {/* BUBBLE MENU */}
+      {/* MOBILE BUBBLE MENU */}
       <AnimatePresence>
 
         {open && (
@@ -114,7 +114,7 @@ export default function Navbar(){
               animate="visible"
               exit="exit"
               className="absolute top-4 right-6 w-12 h-12
-              bg-white"
+              bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]"
             />
 
             {/* menu */}
@@ -125,24 +125,33 @@ export default function Navbar(){
               exit="hidden"
               className="absolute inset-0 flex flex-col
               items-start justify-start mt-6 p-6 gap-10
-              text-black text-3xl font-semibold font-gilroy-regular"
+              text-white text-3xl font-semibold font-gilroy-regular"
             >
 
-              {["Home","Products","Pricing","Contact"].map((itemText)=>(
-                <motion.a key={itemText} variants={item}>
-                  {itemText}
-                </motion.a>
-              ))}
+              <Link href="/" onClick={closeMenu}>
+                <motion.div variants={item}>Home</motion.div>
+              </Link>
 
-            <Link href='/Auth/Login'>
-              <motion.button
-              variants={item}
-              className="px-8 py-3 rounded-lg bg-white text-black text-lg">
+              <Link href="/" onClick={closeMenu}>
+                <motion.div variants={item}>Products</motion.div>
+              </Link>
 
-                Login
+              <Link href="/" onClick={closeMenu}>
+                <motion.div variants={item}>Pricing</motion.div>
+              </Link>
 
-              </motion.button>
-            </Link>
+              <Link href="/" onClick={closeMenu}>
+                <motion.div variants={item}>Contact</motion.div>
+              </Link>
+
+              <Link href="/" onClick={closeMenu}>
+                <motion.button
+                  variants={item}
+                  className="px-8 py-3 rounded-lg bg-white text-black text-lg"
+                >
+                  Login
+                </motion.button>
+              </Link>
 
             </motion.div>
 
@@ -153,5 +162,6 @@ export default function Navbar(){
       </AnimatePresence>
 
     </nav>
+
   )
 }

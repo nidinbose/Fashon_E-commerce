@@ -38,22 +38,27 @@ return (
 
 <div className="container mx-auto px-4 md:px-7">
 
-{/* Title */}
 <motion.h1
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-gilroy-medium text-3xl md:text-6xl py-10 "
+className="font-lufga-regular text-3xl md:text-6xl py-5 "
 >
 New <span className=" bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">arrivals</span>
 </motion.h1>
 
+<motion.p
+initial={{opacity:0,y:20}}
+animate={{opacity:1,y:0}}
+transition={{duration:0.6}}
+className="font-gilroy-light text-xl md:text-xl mb-10 "
+>
+jsdcnbjksdh bcnwdnbckjndwkjcnwd cbhwdbchjwdcjwdn hjdwbchwdbhc
+</motion.p>
 
-{/* Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
 {Items.map((item,index)=>(
-
 <motion.div
 key={index}
 initial={{opacity:0,y:40}}
@@ -63,8 +68,6 @@ transition={{duration:0.5, delay:index*0.1}}
 whileHover={{scale:1.03}}
 className="group p-3 border border-gray-300 rounded-md overflow-hidden bg-white"
 >
-
-{/* Image */}
 <div className="relative overflow-hidden">
 
 <motion.img
@@ -75,7 +78,6 @@ whileHover={{scale:1.1}}
 transition={{duration:0.4}}
 />
 
-{/* Overlay Arrow */}
 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
 
 <div className="rotate-[-40deg] text-9xl font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
@@ -86,8 +88,6 @@ transition={{duration:0.4}}
 
 </div>
 
-
-{/* Product Info */}
 <div className="flex items-center justify-between pt-3">
 
 <div>
@@ -100,8 +100,6 @@ Price : {item.price}
 </h2>
 </div>
 
-
-{/* Icons */}
 <div className="flex gap-3 text-3xl text-black items-center">
 
 <motion.div
@@ -116,9 +114,9 @@ className="cursor-pointer"
 <motion.div
 whileHover={{ x: 10, scale: 1.2 }}
 transition={{ type: "spring", stiffness: 300 }}
-className="cursor-pointer"
+className="cursor-pointer font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent"
 >
-<IoIosArrowRoundForward />
+→
 </motion.div>
 
 </div>
