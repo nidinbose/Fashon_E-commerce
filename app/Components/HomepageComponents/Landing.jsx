@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const images = [
 "https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
-"https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
-"https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
+"https://img.freepik.com/free-photo/portrait-siblings-outdoors-brothers-day-celebration_23-2150266817.jpg?semt=ais_rp_progressive&w=740&q=80",
+"https://cdn.broadsheet.com.au/cache/d1/83/d18302a059299475273e11a87f0fdc2b.jpg",
 "https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
 ]
 

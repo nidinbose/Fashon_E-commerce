@@ -121,7 +121,7 @@ className="cursor-pointer"
 <motion.div
 whileHover={{ x: 10, scale: 1.2 }}
 transition={{ type: "spring", stiffness: 300 }}
-className="cursor-pointer font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent"
+className="cursor-pointer rotate[-40deg] font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent"
 >
 →
 </motion.div>
