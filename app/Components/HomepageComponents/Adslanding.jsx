@@ -6,22 +6,22 @@ const categories = [
   {
     title: "Sneakers",
     count: 16,
-    image: "https://cdn.shopify.com/s/files/1/0265/3448/6517/files/shoe1.png"
+    image: "https://grailify.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0VRQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2e77cb319946c7643b69c4a52a1ee1565515f645/image"
   },
   {
     title: "Ankle Boots",
     count: 8,
-    image: "https://cdn.shopify.com/s/files/1/0265/3448/6517/files/shoe2.png"
+    image: "https://i.etsystatic.com/37795650/r/il/9bd5ed/5690549897/il_570xN.5690549897_5n79.jpg"
   },
   {
     title: "Moccasins",
     count: 12,
-    image: "https://cdn.shopify.com/s/files/1/0265/3448/6517/files/shoe3.png"
+    image: "https://t4.ftcdn.net/jpg/02/47/19/43/360_F_247194310_MeOhnDyH6H92qmayycBHUDY8UvVa6TvJ.jpg"
   },
   {
     title: "Boots",
     count: 23,
-    image: "https://cdn.shopify.com/s/files/1/0265/3448/6517/files/shoe4.png"
+    image: "https://media.istockphoto.com/id/1324844508/photo/gorgeous-woman-wearing-beautiful-maxi-dress-posing-against-wall-with-a-wild-grape.jpg?s=612x612&w=0&k=20&c=BJrcuLt0m5Hm6zOhgO-E0TGqIxzWKdecgw1xcOu1aN4="
   }
 ]
 
@@ -55,8 +55,6 @@ export default function ShopByCategory() {
           Category
         </h2>
       </div>
-
-      {/* Grid */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -71,21 +69,18 @@ export default function ShopByCategory() {
             variants={card}
             className="group cursor-pointer"
           >
-
-            {/* Card */}
             <div className="bg-gray-100 h-[220px] flex items-center justify-center overflow-hidden">
 
               <motion.img
                 src={item.image}
                 alt={item.title}
-                className="h-[120px] object-contain"
+                className="h-[220px] w-full object-cover"
                 whileHover={{ scale: 1.15 }}
                 transition={{ duration: 0.4 }}
               />
 
             </div>
 
-            {/* Text */}
             <div className="mt-3 flex items-center gap-2 text-sm">
 
               <h3 className="font-medium">
