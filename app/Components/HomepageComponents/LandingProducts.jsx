@@ -31,7 +31,22 @@ price:"3000"
 image:"https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
 name:"cef",
 price:"3000"
-}
+},
+{
+image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+name:"green t-shirt",
+price:"3000"
+},,
+{
+image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+name:"green t-shirt",
+price:"3000"
+},,
+{
+image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+name:"green t-shirt",
+price:"3000"
+},
 ]
 
 export default function LandingProducts() {
