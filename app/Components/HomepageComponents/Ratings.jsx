@@ -43,11 +43,10 @@ setWidth(containerRef.current.scrollWidth / 2)
 
 return(
 
-<section className="w-full py-20 overflow-hidden font-gilroy-regular">
+<section className="w-full py-14 overflow-hidden font-gilroy-regular">
 
 <div className="mx-auto px-6">
 
-{/* HEADER */}
 
 <motion.div
 initial={{opacity:0,y:40}}
@@ -66,9 +65,6 @@ Customers love our products and we always strive to please them all.
 </p>
 
 </motion.div>
-
-
-{/* SCROLL */}
 
 <div className="overflow-hidden">
 
@@ -103,7 +99,6 @@ transition
 "
 >
 
-{/* STARS */}
 
 <div className="flex text-orange-400">
 {[...Array(5)].map((_,i)=>(
@@ -112,11 +107,9 @@ transition
 </div>
 
 
-{/* USER */}
-
 <div className="flex items-center gap-2">
 
-<h4 className="font-semibold text-gray-900">
+<h4 className="font-gilroy-regular text-sm md:text-lg text-gray-900">
 {item.name}
 </h4>
 
@@ -126,15 +119,10 @@ transition
 
 </div>
 
-
-{/* REVIEW */}
-
-<p className="text-gray-500 text-lg leading-relaxed border-b pb-6">
+<p className="text-gray-500 text-sm md:text-lg leading-relaxed border-b pb-6">
 {item.text}
 </p>
 
-
-{/* PRODUCT */}
 
 <div className="flex items-center gap-4">
 
@@ -145,7 +133,7 @@ className="w-14 h-14 rounded-full object-cover"
 
 <div>
 
-<p className="font-medium text-gray-900">
+<p className="font-gilroy-light text-sm md:text-lg text-gray-900">
 {item.product}
 </p>
 

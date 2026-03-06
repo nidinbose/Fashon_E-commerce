@@ -8,10 +8,23 @@ export default function About() {
 
       <div className=" mx-auto">
 
-        {/* TITLE */}
-        <h2 className="text-center text-4xl text-black md:text-5xl font-gilroy-regular mb-16">
-          Arrowfly <span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">About</span>
-        </h2>
+ <motion.h1
+initial={{opacity:0,y:20}}
+animate={{opacity:1,y:0}}
+transition={{duration:0.6}}
+className="font-lufga-regular text-3xl md:text-6xl py-5 text-center text-black"
+>
+About <span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">arrowfly</span>
+</motion.h1>
+
+<motion.p
+initial={{opacity:0,y:20}}
+animate={{opacity:1,y:0}}
+transition={{duration:0.6}}
+className="font-gilroy-light text-xl md:text-xl text-black mb-10 text-center"
+>
+Unlock your potential with our quality products from <span className="font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Arrowfly</span>
+</motion.p>
 
         {/* TOP GRID */}
         <div className="grid md:grid-cols-3 gap-8 items-start">

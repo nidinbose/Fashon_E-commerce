@@ -9,12 +9,11 @@ import LimitedStock from "../HomepageComponents/LimitedStock"
 import MostFavourite from "../HomepageComponents/MostFavourite"
 import Policies from "../HomepageComponents/Policies"
 import Ratings from "../HomepageComponents/Ratings"
+import Shop from "../HomepageComponents/Shop"
 import Textcarosal from "../HomepageComponents/Textcarosal"
-import Loading from "../Naviagation/Loading"
-
 export default function Homepage(){
     return(
-        <div>
+        <div className="overflow-x-hidden">
           <Landing/>
           <Textcarosal/>
           <LandingProducts/>
@@ -22,10 +21,11 @@ export default function Homepage(){
           <Policies/>
           <Ads1/>
           <MostFavourite/>
+           <Shop/>
           <About/>
            <LimitedStock/>
            <Ratings/>
-           <Loading/>
+          
           
         </div>
     )
