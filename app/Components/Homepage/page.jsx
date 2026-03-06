@@ -8,6 +8,7 @@ import LimitedStock from "../HomepageComponents/LimitedStock"
 import MostFavourite from "../HomepageComponents/MostFavourite"
 import Policies from "../HomepageComponents/Policies"
 import Textcarosal from "../HomepageComponents/Textcarosal"
+import Loading from "../Naviagation/Loading"
 
 export default function Homepage(){
     return(
@@ -20,6 +21,7 @@ export default function Homepage(){
           <MostFavourite/>
           <About/>
            <LimitedStock/>
+           <Loading/>
           
         </div>
     )

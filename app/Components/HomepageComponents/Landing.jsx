@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Loading from "../Naviagation/Loading"
 
 const images = [
 "https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
@@ -14,7 +15,21 @@ export default function Landing(){
 
 const [index,setIndex] = useState(0)
 const [text,setText] = useState("")
+const [loading,setLoading] = useState(true)
+
 const word = "Arrowfly"
+
+
+useEffect(()=>{
+
+const timer = setTimeout(()=>{
+setLoading(false)
+},1500)
+
+return ()=> clearTimeout(timer)
+
+},[])
+
 
 useEffect(()=>{
 const interval = setInterval(()=>{
@@ -24,8 +39,6 @@ setIndex((prev)=> (prev + 1) % images.length)
 return ()=>clearInterval(interval)
 },[])
 
-
-/* TYPEWRITER */
 
 useEffect(()=>{
 let i = 0
@@ -49,7 +62,19 @@ return(
 
 <section className="relative w-full h-screen overflow-hidden">
 
-{/* IMAGE SLIDER */}
+<AnimatePresence>
+
+{loading && (
+
+<Loading/>
+
+)}
+
+</AnimatePresence>
+
+{!loading && (
+
+<>
 
 <AnimatePresence>
 
@@ -67,12 +92,8 @@ className="absolute w-full h-full object-cover"
 
 
 
-{/* CONTENT */}
-
 <div className="relative z-10 h-full flex flex-col justify-between px-6 md:px-16 py-10 text-white">
 
-
-{/* TOP TEXT */}
 
 <motion.div
 initial={{opacity:0,y:-20}}
@@ -88,7 +109,6 @@ Exclusive & <br/> Trending Collection
 </motion.div>
 
 
-{/* HERO TEXT */}
 
 <div className="absolute bottom-20 right-6 md:right-16">
 
@@ -109,7 +129,6 @@ Exclusive & <br/> Trending Collection
 </div>
 
 
-{/* PROGRESS BUBBLES */}
 
 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4">
 
@@ -138,6 +157,10 @@ className="h-full bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]"
 
 
 </div>
+
+</>
+
+)}
 
 </section>
 

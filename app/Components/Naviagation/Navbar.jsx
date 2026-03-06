@@ -10,21 +10,53 @@ import Link from "next/link"
 export default function Navbar(){
 
   const [open,setOpen] = useState(false)
-  const [scrolled,setScrolled] = useState(false)
+  const [showBlur,setShowBlur] = useState(false)
+
+  const [cut,setCut] = useState(false)
+  const [flip,setFlip] = useState(false)
 
   useEffect(()=>{
-    const handleScroll = ()=>{
-      if(window.scrollY > 20){
-        setScrolled(true)
+
+    let lastScroll = window.scrollY
+
+    const handleScroll = () => {
+
+      const currentScroll = window.scrollY
+
+      if(currentScroll < lastScroll && currentScroll > 50){
+        setShowBlur(true)
       }else{
-        setScrolled(false)
+        setShowBlur(false)
       }
+
+      lastScroll = currentScroll
     }
 
     window.addEventListener("scroll",handleScroll)
+
     return ()=> window.removeEventListener("scroll",handleScroll)
 
   },[])
+
+
+  useEffect(()=>{
+
+    const interval = setInterval(()=>{
+
+      setCut(true)
+      setFlip(true)
+
+      setTimeout(()=>{
+        setCut(false)
+        setFlip(false)
+      },800)
+
+    },4000)
+
+    return ()=> clearInterval(interval)
+
+  },[])
+
 
   useEffect(()=>{
     document.body.style.overflow = open ? "hidden" : "auto"
@@ -60,36 +92,39 @@ export default function Navbar(){
 
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300
-      ${scrolled ? "backdrop-blur-lg bg-white/70 shadow-sm" : "bg-transparent"}`}
+      ${showBlur
+        ? "backdrop-blur-sm shadow-md"
+        : "bg-transparent"
+      }`}
     >
 
       <div className="flex items-center justify-between px-4 md:px-6 py-4">
 
-        {/* LOGO WITH ANIMATION */}
-
         <Link href="/">
 
           <motion.div
-            className="relative cursor-pointer perspective-1000"
-            whileHover={{ rotateX: 12 }}
-            transition={{ duration:0.4 }}
+            animate={{ rotateX: flip ? 180 : 0 }}
+            transition={{ duration:0.6 }}
+            style={{ transformStyle:"preserve-3d" }}
+            className="relative cursor-pointer"
           >
-
-            {/* TEXT */}
 
             <h1 className="text-3xl font-lufga-regular bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent relative">
 
               Arrowfly
 
-              {/* ARROW CUT ANIMATION */}
+              {cut && (
 
-              <motion.span
-                initial={{ x:"-120%" }}
-                whileHover={{ x:"120%" }}
-                transition={{ duration:0.8, ease:"easeInOut" }}
-                className="absolute top-1/2 left-0 w-full h-[2px]
-                bg-gradient-to-r from-transparent via-white to-transparent"
-              />
+                <motion.span
+                  initial={{ x:"-120%" }}
+                  animate={{ x:"120%" }}
+                  transition={{ duration:0.8, ease:"easeInOut" }}
+                  className="absolute top-1/2 left-0 w-full h-[2px]
+                  bg-gradient-to-r from-transparent via-white to-transparent
+                  shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                />
+
+              )}
 
             </h1>
 
@@ -98,8 +133,6 @@ export default function Navbar(){
         </Link>
 
 
-        {/* DESKTOP MENU */}
-
         <div className="hidden md:flex gap-7 font-gilroy-regular text-black text-xl">
           <Link href="/">Home</Link>
           <Link href="/">Products</Link>
@@ -107,8 +140,6 @@ export default function Navbar(){
           <Link href="/">Contact</Link>
         </div>
 
-
-        {/* DESKTOP ICONS */}
 
         <div className="hidden md:flex gap-5 items-center">
 
@@ -121,20 +152,14 @@ export default function Navbar(){
 
         </div>
 
-
-        {/* MOBILE ICONS */}
-
         <div className="flex items-center gap-4 md:hidden">
 
           <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
-
           <FiUser className="w-6 h-6 text-black cursor-pointer"/>
 
           <Link href="/Cart">
             <BsBag className="w-6 h-6 text-black cursor-pointer"/>
           </Link>
-
-          {/* HAMBURGER */}
 
           <button
             onClick={()=>setOpen(!open)}
@@ -165,7 +190,7 @@ export default function Navbar(){
 
           <div className="fixed inset-0 z-[60]">
 
-            <motion.div
+          <motion.div
               variants={bubble}
               initial="hidden"
               animate="visible"
