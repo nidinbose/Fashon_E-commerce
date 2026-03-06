@@ -1,156 +1,186 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+import { MdDeleteSweep } from "react-icons/md";
+import Link from "next/link";
+
+export default function CartPage() {
+
+  const cartItems = [
+    {
+      productId: 1,
+      name: "Nike Running Shoes",
+      price: 2999,
+      quantity: 1,
+      imageLink:
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    },
+    {
+      productId: 2,
+      name: "Apple AirPods Pro",
+      price: 19999,
+      quantity: 1,
+      imageLink:
+        "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434"
+    },
+    {
+      productId: 3,
+      name: "Smart Watch",
+      price: 5999,
+      quantity: 2,
+      imageLink:
+        "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b"
+    }
+  ];
+
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-10">
 
-    <div className="py-1 px-4 sm:px-10">
-
-      {/* Header */}
-      <div className="flex gap-2 border-b border-gray-300 pb-4">
-        <h2 className="text-xl font-semibold text-slate-900 flex-1">
-          Shopping Cart
-        </h2>
-        <h4 className="text-base text-slate-900 font-medium">4 Items</h4>
-      </div>
+      {/* Page Title */}
+      <h1 className="text-3xl md:text-4xl font-gilroy-medium mb-10 bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+        Shopping Cart
+      </h1>
 
       <div className="grid lg:grid-cols-3 gap-10">
 
-        {/* Cart Items */}
-        <div className="lg:col-span-2 bg-white divide-y divide-gray-300">
+        {/* CART ITEMS */}
 
-          {/* Item */}
-          <div className="flex sm:items-center max-sm:flex-col gap-6 py-6">
-            <div className="w-32 shrink-0">
-              <img
-                src="https://readymadeui.com/images/black-sweaters-1.webp"
-                className="w-full aspect-square object-contain"
-                alt="product"
-              />
-            </div>
+        <div className="lg:col-span-2 space-y-6">
 
-            <div className="flex items-start gap-4 w-full">
+          {cartItems.map((item) => (
 
-              <div>
-                <h3 className="text-base font-semibold text-slate-900 mb-2">
-                  Sweater
-                </h3>
+            <div
+              key={item.productId}
+              className="flex flex-col sm:flex-row gap-6 p-5 rounded-xl border border-gray-200 hover:shadow-lg transition duration-300"
+            >
 
-                <div className="space-y-2">
-                  <h6 className="text-sm text-slate-900">
-                    Size: <span className="ml-2 font-medium">MD</span>
-                  </h6>
-                  <h6 className="text-sm text-slate-900">
-                    Color: <span className="ml-2 font-medium">Black</span>
-                  </h6>
-                </div>
+              {/* Product Image */}
 
-                <div className="mt-4 flex flex-wrap gap-4">
-
-                  <button className="font-medium text-red-500 text-sm flex items-center gap-2 cursor-pointer">
-                    Remove
-                  </button>
-
-                  <button className="font-medium text-pink-500 text-sm flex items-center gap-2 cursor-pointer">
-                    Move to wish list
-                  </button>
-
-                </div>
+              <div className="w-full sm:w-40 flex-shrink-0">
+                <img
+                  src={item.imageLink}
+                  alt={item.name}
+                  className="rounded-lg object-cover w-full h-40"
+                />
               </div>
 
-              {/* Quantity + Price */}
-              <div className="ml-auto text-right">
+              {/* Product Info */}
 
-                <div className="flex gap-2 items-center border border-gray-300 px-3 py-2 w-max rounded-full">
+              <div className="flex flex-col justify-between flex-1">
 
-                  <button className="cursor-pointer">-</button>
+                <div>
 
-                  <span className="text-slate-900 text-sm font-semibold px-2">
-                    1
-                  </span>
+                  <h3 className="text-lg md:text-xl font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+                    {item.name}
+                  </h3>
 
-                  <button className="cursor-pointer">+</button>
+                  <p className="text-sm text-gray-600 font-gilroy-light mt-1">
+                    Tax included • Free delivery
+                  </p>
 
                 </div>
 
-                <div className="mt-6">
-                  <h4 className="text-base font-semibold text-slate-900">
-                    ₹18.50
-                  </h4>
+                <div className="flex items-center justify-between mt-5">
 
-                  <h4 className="text-base text-slate-500 mt-1">
-                    <strike className="font-medium">₹22.50</strike>
-                  </h4>
+                  {/* Quantity Control */}
+
+                  <div className="flex items-center gap-3">
+
+                    <button className="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-gray-100">
+                      -
+                    </button>
+
+                    <span className="font-medium text-lg font-gilroy-medium">
+                      {item.quantity}
+                    </span>
+
+                    <button className="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-gray-100">
+                      +
+                    </button>
+
+                  </div>
+
+                  {/* Price */}
+
+                  <div className="flex items-center gap-4">
+
+                    <p className="text-lg font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+                      ₹ {(item.price * item.quantity).toFixed(2)}
+                    </p>
+
+                    <button className="text-gray-400 hover:text-red-500 transition">
+                      <MdDeleteSweep size={24} />
+                    </button>
+
+                  </div>
+
                 </div>
 
               </div>
 
             </div>
-          </div>
+
+          ))}
 
         </div>
 
-        {/* Order Summary */}
-        <div className="border-l border-gray-300 p-6 lg:sticky lg:top-0 h-full">
+        {/* ORDER SUMMARY */}
 
-          <h3 className="text-lg font-semibold text-slate-900 border-b border-gray-300 pb-4">
-            Order Summary
-          </h3>
+        <div className="lg:sticky lg:top-24 h-fit">
 
-          <ul className="text-slate-500 font-medium divide-y divide-gray-300 mt-4">
+          <div className="p-6 border rounded-xl shadow-sm">
 
-            <li className="flex text-sm py-3">
-              Subtotal
-              <span className="ml-auto font-semibold text-slate-900">
-                ₹56.00
-              </span>
-            </li>
+            <h2 className="text-xl font-gilroy-medium mb-6 font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+              Order Summary
+            </h2>
 
-            <li className="flex text-sm py-3">
-              Shipping
-              <span className="ml-auto font-semibold text-slate-900">
-                ₹4.00
-              </span>
-            </li>
+            <div className="space-y-4 text-gray-700 font-gilroy-medium">
 
-            <li className="flex text-sm py-3">
-              Tax
-              <span className="ml-auto font-semibold text-slate-900">
-                ₹4.00
-              </span>
-            </li>
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>₹ {total.toFixed(2)}</span>
+              </div>
 
-            <li className="flex text-sm py-3 font-semibold text-slate-900">
-              Total
-              <span className="ml-auto">₹64.00</span>
-            </li>
+              <div className="flex justify-between">
+                <span>Taxes</span>
+                <span>Included</span>
+              </div>
 
-          </ul>
+              <div className="flex justify-between">
+                <span>GST</span>
+                <span>10%</span>
+              </div>
 
-          <button className="mt-4 text-sm font-medium px-4 py-2.5 w-full rounded-md bg-blue-600 hover:bg-blue-700 text-white">
-            Proceed to Checkout
-          </button>
-
-          {/* Promo Code */}
-          <div className="mt-8">
-
-            <h4 className="text-base font-semibold text-slate-900 mb-3">
-              Apply promo code
-            </h4>
-
-            <div className="flex border border-blue-600 overflow-hidden rounded-md">
-
-              <input
-                type="text"
-                placeholder="Promo code"
-                className="w-full outline-none bg-white text-slate-900 text-sm px-4 py-2.5"
-              />
-
-              <button className="bg-blue-600 hover:bg-blue-700 px-5 text-sm font-medium text-white">
-                Apply
-              </button>
+              <div className="flex justify-between">
+                <span>Delivery</span>
+                <span>Free</span>
+              </div>
 
             </div>
+
+            <hr className="my-6" />
+
+            <div className="flex justify-between text-lg font-gilroy-medium mb-6">
+
+              <span>Total</span>
+
+              <span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+                ₹ {total.toFixed(2)}
+              </span>
+
+            </div>
+
+            <Link href="/checkout">
+
+              <button className="w-full py-3 font-gilroy-medium rounded-lg font-medium text-white bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] hover:opacity-90 transition">
+                Continue to Checkout
+              </button>
+
+            </Link>
 
           </div>
 
@@ -159,10 +189,5 @@ const page = () => {
       </div>
 
     </div>
-  
-
-    </div>
-  )
+  );
 }
-
-export default page
