@@ -92,3 +92,12 @@ body {
 .font-lufga-regular {
   font-family: "LufgaRegular", sans-serif;
 }
+
+.sidebar-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
