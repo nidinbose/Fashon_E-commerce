@@ -10,6 +10,7 @@ import { ResponsiveContainer, LineChart, Line } from "recharts";
 import { IoCartOutline } from "react-icons/io5";
 import {PieChart, Pie, Cell, } from "recharts";
 import { GoContainer } from "react-icons/go";
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import {
 XAxis,
 YAxis,
@@ -53,6 +54,15 @@ const ordersalesData = [
   { value: 700 },
 ];
 
+const stocksalesData = [
+  { value: 720 },
+  { value: 600 },
+  { value: 550 },
+  { value: 180 },
+  { value: 340 },
+  { value: 220 },
+  { value: 200 },
+];
 
 const dynamic=[
     {icon:<FiPackage/>,name:"Product management"},
@@ -100,7 +110,7 @@ className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover"
 <IoIosNotificationsOutline className="text-white text-xl sm:text-2xl"/>
 </div>
 </div>
-<div className="flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]">
+<div className="flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]"onClick={()=>setOpen(false)}>
 <FiX className="text-white text-xl sm:text-2xl" onClick={()=>setOpen(false)}/>
 </div>
 </div>
@@ -137,18 +147,22 @@ className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover"
 <div className="">
     {/* Main Content */}
    <div>
-     <div className="flex justify-between">
-       <div>
-         <h1 className="text-white">Search</h1>
+     <div className="flex justify-between items-center px-7 p-4">
+       <div className="flex items-center justify-start gap-3">
+          <button onClick={()=>{setOpen(true)}} className=" bg-gray-500/10 p-4 rounded-2xl">
+          <HiOutlineMenuAlt2  className=" w-7 h-7 text-white"/>
+          </button>
+          <div className="hidden md:inline">
+            <input type="search" placeholder="Search ......" className="text-white bg-gray-500/10 p-4 w-50 rounded-xl font-lufga-regular" />
+          </div>
        </div>
 
-       <div className="text-white flex gap-4">
-        <h1>iciom</h1>
-        <h1>iciom</h1>
-        <h1>iciom</h1>
+       <div className="text-white flex gap-2 text-lg md:text-xl bg-gray-500/10 p-4 rounded-xl font-lufga-regular">
+        <h1 cl>Welcome : </h1>
+          <h2 className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">User</h2>
        </div>
      </div>
-    <button onClick={()=>{setOpen(true)}} className="bg-white w-10 h-20 ">open</button>
+  
 
    </div>
 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 h-screen w-full p-5 md:p-7">
@@ -305,7 +319,7 @@ paddingAngle={5}
       <p className="text-sm text-white mt-1 font-gilroy-light">Sufficient stock</p>
        <div className="w-60 lg:w-82 h-16">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={ordersalesData}>
+        <LineChart data={stocksalesData}>
                <defs>
             <linearGradient id="salesGradient" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#FF902F" />
@@ -326,7 +340,7 @@ paddingAngle={5}
     </div>
   </div>
 </div>
-<div className="bg-gray-300/10 rounded-xl p-6 text-white md:col-span-2 xl:col-span-2 space-y-4">
+<div className="bg-gray-500/10 rounded-4xl p-6 text-white md:col-span-2 xl:col-span-2 space-y-4">
 <h2 className="text-3xl font-lufga-regular">Monthly Sales</h2>
 <div className="h-60">
 <ResponsiveContainer width="100%" height="100%">
@@ -369,62 +383,33 @@ dot={false}
 </div>
 
 
-{/* Top Products */}
-<div className="bg-gray-300/10 rounded-xl p-6 text-white space-y-4">
-<h2 className="text-lg font-lufga-regular">Top Products</h2>
-
-<div className="space-y-3">
-
-<div className="flex justify-between text-sm">
-<span>Wireless Headphones</span>
-<span>$120</span>
-</div>
-
-<div className="flex justify-between text-sm">
-<span>Running Shoes</span>
-<span>$90</span>
-</div>
-
-<div className="flex justify-between text-sm">
-<span>Gaming Mouse</span>
-<span>$60</span>
-</div>
-
-<div className="flex justify-between text-sm">
-<span>Smart Watch</span>
-<span>$210</span>
-</div>
-
-</div>
-
-</div>
 
 
 {/* Recent Orders */}
-<div className="bg-gray-300/10 rounded-xl p-6 text-white md:col-span-2 xl:col-span-2 space-y-4">
+<div className="bg-gray-500/10 rounded-4xl p-6 text-white md:col-span-2 xl:col-span-2 space-y-4 text-lufga-regular">
 
-<h2 className="text-lg font-lufga-regular">Recent Orders</h2>
+<h2 className="text-lg  md:text-2xl font-lufga-regular font-gilroy-bold bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Recent Orders</h2>
 
 <div className="space-y-3 text-sm">
 
 <div className="flex justify-between">
 <span>#ORD-1021</span>
-<span className="text-green-400">$320</span>
+<span className="font-gilroy-bold bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent ">$320</span>
 </div>
 
 <div className="flex justify-between">
 <span>#ORD-1022</span>
-<span className="text-green-400">$190</span>
+<span className="font-gilroy-bold bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">$190</span>
 </div>
 
 <div className="flex justify-between">
 <span>#ORD-1023</span>
-<span className="text-red-400">$80</span>
+<span className="font-gilroy-bold bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">$80</span>
 </div>
 
 <div className="flex justify-between">
 <span>#ORD-1024</span>
-<span className="text-green-400">$450</span>
+<span className="font-gilroy-bold bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">$450</span>
 </div>
 
 </div>
@@ -432,36 +417,37 @@ dot={false}
 </div>
 
 
-{/* Customers List */}
-<div className="bg-gray-300/10 rounded-xl p-6 text-white space-y-4">
+{/* Top Products */}
+<div className="bg-gray-500/10 rounded-4xl p-6 text-white font-lufga-regular space-y-4">
+<h2 className="text-xl md:text-2xl font-lufga-regular bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Top Products</h2>
 
-<h2 className="text-lg font-lufga-regular">New Customers</h2>
+<div className="space-y-3">
 
-<div className="space-y-3 text-sm">
-
-<div className="flex justify-between">
-<span>John Carter</span>
-<span className="text-green-400">Active</span>
+<div className="flex justify-between text-base">
+<span>Wireless Headphones</span>
+<span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent font-gilroy-bold">$120</span>
 </div>
 
-<div className="flex justify-between">
-<span>Sarah Lee</span>
-<span className="text-green-400">Active</span>
+<div className="flex justify-between text-base">
+<span>Running Shoes</span>
+<span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent font-gilroy-bold">$90</span>
 </div>
 
-<div className="flex justify-between">
-<span>David Kim</span>
-<span className="text-yellow-400">Pending</span>
+<div className="flex justify-between text-base">
+<span>Gaming Mouse</span>
+<span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent font-gilroy-bold">$60</span>
 </div>
 
-<div className="flex justify-between">
-<span>Emma Wilson</span>
-<span className="text-green-400">Active</span>
-</div>
-
+<div className="flex justify-between text-base">
+<span>Smart Watch</span>
+<span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent font-gilroy-bold">$210</span>
 </div>
 
 </div>
+
+</div>
+
+
 
 </div>
 </div>
