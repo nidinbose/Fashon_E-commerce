@@ -158,7 +158,7 @@ className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover"
        </div>
 
        <div className="text-white flex gap-2 text-lg md:text-xl bg-gray-500/10 p-4 rounded-xl font-lufga-regular">
-        <h1 cl>Welcome : </h1>
+        <h1>Welcome : </h1>
           <h2 className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">User</h2>
        </div>
      </div>
