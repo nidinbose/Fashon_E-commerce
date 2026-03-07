@@ -165,7 +165,7 @@ className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover"
   
 
    </div>
-<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 h-screen w-full p-5 md:p-7">
+<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 h-full w-full p-5 md:p-7">
 
 {/* Total Sales */}
 <div className="bg-gray-500/10 rounded-4xl p-6 text-white space-y-4">
