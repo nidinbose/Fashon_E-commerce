@@ -11,7 +11,7 @@ const items = [
   },
   {
     title: "ONE-PIECES",
-    image: "/Images/L1.jpg",
+    image: "/Images/L2.jpg",
   },
   {
     title: "DRESSES",
@@ -19,11 +19,11 @@ const items = [
   },
   {
     title: "ROMPERS & JUMPSUITS",
-    image: "/Images/L3.jpg",
+    image: "/Images/L2.jpg",
   },
   {
     title: "COVER-UPS",
-    image: "/Images/L1.jpg",
+    image: "/Images/L2.jpg",
   },
 
 ]
