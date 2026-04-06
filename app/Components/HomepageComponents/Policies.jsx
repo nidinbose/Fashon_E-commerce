@@ -82,7 +82,7 @@ export default function Policies() {
 
               {/* Title */}
               <motion.h3
-                className="text-lg bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent font-gilroy-regular mb-2"
+                className="text-lg bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-[#FF5F2D] font-gilroy-regular mb-2"
                 whileHover={{ scale: 1.05 }}
               >
                 {item.title}

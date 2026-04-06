@@ -6,6 +6,7 @@ import { IoIosSearch } from "react-icons/io"
 import { BsBag } from "react-icons/bs"
 import { FiUser } from "react-icons/fi"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Navbar(){
 
@@ -91,10 +92,10 @@ export default function Navbar(){
   return (
 
     <nav
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300
+      className={`fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[96vw] mx-auto max-w-7xl mx-auto transition-all duration-300 rounded-xl 
       ${showBlur
-        ? "backdrop-blur-sm shadow-md"
-        : "bg-transparent"
+        ? "bg-white shadow-md"
+        : "bg-white"
       }`}
     >
 
@@ -109,9 +110,12 @@ export default function Navbar(){
             className="relative cursor-pointer"
           >
 
-            <h1 className="text-3xl font-lufga-regular bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent relative">
+            <h1 className="text-2xl font-lufga-regular text-[#FF5F2D] flex gap-2 relative">
 
-              Arrowfly
+              <Image
+              src={`/Images/Lg1.png`}
+              width={30}
+              height={30}/> Granest
 
               {cut && (
 
@@ -133,32 +137,40 @@ export default function Navbar(){
         </Link>
 
 
-        <div className="hidden md:flex gap-7 font-gilroy-regular text-black text-xl">
-          <Link href="/">Home</Link>
-          <Link href="/">Products</Link>
-          <Link href="/">Pricing</Link>
-          <Link href="/">Contact</Link>
-        </div>
+    <div className="hidden md:flex gap-7 font-gilroy-medium text-black text-[15px]">
+  <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
+    Home
+  </Link>
+  <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
+    Products
+  </Link>
+  <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
+    Pricing
+  </Link>
+  <Link href="/" className="hover:text-[#FF5F2D]  transition-colors duration-200">
+    Contact
+  </Link>
+</div>
 
 
         <div className="hidden md:flex gap-5 items-center">
 
-          <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
-          <FiUser className="w-6 h-6 text-black cursor-pointer"/>
+          <IoIosSearch className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
+          <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
 
           <Link href="/Cart">
-            <BsBag className="w-6 h-6 text-black cursor-pointer"/>
+            <BsBag className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
           </Link>
 
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
 
-          <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
-          <FiUser className="w-6 h-6 text-black cursor-pointer"/>
+          <IoIosSearch className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
+          <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
 
           <Link href="/Cart">
-            <BsBag className="w-6 h-6 text-black cursor-pointer"/>
+            <BsBag className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
           </Link>
 
           <button
@@ -196,7 +208,7 @@ export default function Navbar(){
               animate="visible"
               exit="exit"
               className="absolute top-5 right-5 w-12 h-12
-              bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE]"
+              bg-[#FF5F2D]"
             />
 
             <motion.div

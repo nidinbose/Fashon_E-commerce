@@ -51,7 +51,7 @@ className="absolute w-full h-full object-cover"
 
 <div className="bg-white backdrop-blur-md rounded-2xl px-6 sm:px-10 py-8 text-center w-full max-w-sm sm:max-w-md md:max-w-xl shadow-xl">
 
-<h2 className="text-2xl sm:text-3xl bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent md:text-4xl font-semibold text-gray-900">
+<h2 className="text-2xl sm:text-3xl text-[#FF5F2D] md:text-4xl font-semibold ">
 One-Time Only
 </h2>
 
@@ -89,7 +89,7 @@ Explore our latest considered collection for the new season.
 
 </div>
 
-<button className="mt-6 px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] text-white rounded-lg font-gilroy-medium hover:scale-105 transition">
+<button className="mt-6 px-6 sm:px-8 py-2.5 sm:py-3 bg-[#FF5F2D] text-white rounded-lg font-gilroy-medium hover:scale-105 transition">
 Shop Sale
 </button>
 

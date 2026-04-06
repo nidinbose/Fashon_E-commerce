@@ -51,7 +51,7 @@ export default function ShopByCategory() {
       <div className="mb-10 text-center">
         <p className="text-gray-500 font-lufga-light text-center">Shop By</p>
 
-        <h2 className=" text-center text-4xl md:text-6xl font-gilroy-regular inline bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent -mt-3 ">
+        <h2 className=" text-center text-4xl md:text-6xl font-gilroy-regular inline text-[#FF5F2D] -mt-3 ">
           Category
         </h2>
       </div>
@@ -69,7 +69,7 @@ export default function ShopByCategory() {
             variants={card}
             className="group cursor-pointer"
           >
-            <div className="bg-gray-100 h-[220px] flex items-center justify-center overflow-hidden">
+            <div className="bg-gray-100 h-[220px] flex items-center justify-center overflow-hidden rounded-3xl">
 
               <motion.img
                 src={item.image}

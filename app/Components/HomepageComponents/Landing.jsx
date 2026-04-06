@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import Loading from "../Naviagation/Loading"
 
 const images = [
-"https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
-"https://img.freepik.com/free-photo/portrait-siblings-outdoors-brothers-day-celebration_23-2150266817.jpg?semt=ais_rp_progressive&w=740&q=80",
-"https://cdn.broadsheet.com.au/cache/d1/83/d18302a059299475273e11a87f0fdc2b.jpg",
-"https://sourcingjournal.com/wp-content/uploads/2024/12/GettyImages1735100420.jpg",
+"./Images/G1.webp",
+"./Images/G4.png",
+"./Images/G3.png",
+"./Images/G2.png",
 ]
 
 export default function Landing(){
@@ -17,7 +17,7 @@ const [index,setIndex] = useState(0)
 const [text,setText] = useState("")
 const [loading,setLoading] = useState(true)
 
-const word = "Arrowfly"
+const word = "Granest"
 
 
 useEffect(()=>{
@@ -116,7 +116,7 @@ Exclusive & <br/> Trending Collection
 
 {text.slice(0,5)}
 
-<span className="italic bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">
+<span className="italic  text-[#FF5F2D]">
 {text[5] || ""}
 </span>
 
