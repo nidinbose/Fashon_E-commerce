@@ -3,6 +3,7 @@
 import About from "../HomepageComponents/About"
 import Ads1 from "../HomepageComponents/Ads1"
 import Adslanding from "../HomepageComponents/Adslanding"
+import Grid from "../HomepageComponents/Grid"
 import Landing from "../HomepageComponents/Landing"
 import LandingProducts from "../HomepageComponents/LandingProducts"
 import LimitedStock from "../HomepageComponents/LimitedStock"
@@ -16,6 +17,7 @@ export default function Homepage(){
         <div className="overflow-x-hidden">
           <Landing/>
           <Textcarosal/>
+          <Grid/>
           <LandingProducts/>
           <Adslanding/>
           <Policies/>

@@ -121,8 +121,7 @@ export default function Landing() {
 
             </AnimatePresence>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-[#FF5F2D]/40  group-hover:to-[#FF5F2D]/70 transition-all duration-500" />
           </div>
 
           {/* ✅ Content */}

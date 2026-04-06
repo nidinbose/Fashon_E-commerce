@@ -10,7 +10,6 @@ export default function Loading() {
   return (
     <div className="h-screen w-full flex items-center justify-center bg-[#FF5F2D] overflow-hidden">
 
-      {/* Background glow */}
       <motion.div
         className="absolute w-[400px] h-[400px]  rounded-full blur-3xl"
         animate={{
@@ -26,7 +25,6 @@ export default function Loading() {
 
       <div className="flex flex-col items-center gap-8 relative z-10">
 
-        {/* Animated Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
           animate={{
@@ -41,7 +39,6 @@ export default function Loading() {
           }}
           className="relative"
         >
-          {/* Glow ring */}
           <motion.div
             className="absolute inset-0 rounded-full  blur-2xl opacity-40"
             animate={{ rotate: 360 }}
@@ -54,8 +51,8 @@ export default function Loading() {
 
           <Image
             src={`/Images/LGW.png`}
-            width={180}
-            height={180}
+            width={280}
+            height={280}
             alt="Granest"
             className="relative z-10 drop-shadow-2xl"
           />

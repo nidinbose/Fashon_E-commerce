@@ -42,7 +42,7 @@ viewport={{once:true}}
 variants={card}
 className="font-lufga-regular text-3xl md:text-6xl py-5 text-center"
 >
-Explore latest <span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">collection</span>
+Explore latest <span className=" text-[#FF5F2D]">collection</span>
 </motion.h1>
 
 <motion.p
@@ -53,7 +53,7 @@ variants={card}
 className="font-gilroy-light text-xl mb-10 text-center"
 >
 Unlock your potential with our quality products from
-<span className="font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+<span className=" text-[#FF5F2D]">
  Arrowfly
 </span>
 </motion.p>
@@ -72,10 +72,11 @@ className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[220px] md:auto-rows-
 {/* CARD */}
 
 {[
-{title:"Shoes",img:"https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200"},
-{title:"Bags",img:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200"},
-{title:"Sunglasses",img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200"},
-{title:"Pants",img:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200"}
+{title:"Shoes",img:"/Images/S1.jpg"},
+{title:"Pants",img:"/Images/S3.jpg"},
+{title:"Tshirts",img:"/Images/S2.jpg"},
+{title:"Ladies top",img:"/Images/S4.jpg"}
+
 ].map((item,index)=>(
 
 <motion.div
@@ -90,10 +91,9 @@ src={item.img}
 loading="lazy"
 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
 />
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-[#FF5F2D]/40  group-hover:to-[#FF5F2D]/70 transition-all duration-500" />
 
-{/* overlay */}
 
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition"/>
 
 {/* title */}
 
@@ -112,7 +112,7 @@ className="absolute bottom-6 left-6 text-white text-3xl font-serif"
 <motion.div
 whileHover={{rotate:45,scale:1.1}}
 transition={{type:"spring",stiffness:260}}
-className="absolute bottom-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white text-black shadow-lg"
+className="absolute bottom-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-[#FF5F2D] text-white shadow-lg"
 >
 <FiArrowUpRight/>
 </motion.div>

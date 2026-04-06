@@ -77,7 +77,7 @@ return (
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-lufga-regular text-3xl md:text-6xl py-5 "
+className="font-lufga-regular text-3xl text-center md:text-6xl py-5 "
 >
 New <span className="text-[#FF5F2D]">arrivals</span>
 </motion.h1>
@@ -86,7 +86,7 @@ New <span className="text-[#FF5F2D]">arrivals</span>
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-gilroy-light text-xl md:text-xl mb-10 "
+className="font-gilroy-light text-xl text-center md:text-xl mb-10 "
 >
 Unlock your potential with our quality products from <span className="font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-[#FF5F2D]">Granest</span>
 </motion.p>
