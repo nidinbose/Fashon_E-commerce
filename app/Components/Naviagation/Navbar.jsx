@@ -155,7 +155,7 @@ export default function Navbar(){
 
         <div className="hidden md:flex gap-5 items-center">
 
-          <IoIosSearch className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
+          <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
           <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
 
           <Link href="/Cart">
@@ -166,7 +166,7 @@ export default function Navbar(){
 
         <div className="flex items-center gap-4 md:hidden">
 
-          <IoIosSearch className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
+          <IoIosSearch className="w-6 h-6 text-black cursor-pointer"/>
           <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
 
           <Link href="/Cart">
