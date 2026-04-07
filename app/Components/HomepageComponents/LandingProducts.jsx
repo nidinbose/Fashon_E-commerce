@@ -71,7 +71,7 @@ setAddedIndex(null)
 
 return (
 
-<div className="mx-auto px-4 md:px-7">
+<div className="mx-auto px-4 md:px-7 h-full">
 
 <motion.h1
 initial={{opacity:0,y:20}}
@@ -92,7 +92,7 @@ Unlock your potential with our quality products from <span className="font-lufga
 </motion.p>
 
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
 {Items.map((item,index)=>(
 
