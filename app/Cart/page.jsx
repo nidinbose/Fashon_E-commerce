@@ -74,7 +74,7 @@ export default function CartPage() {
 
                 <div>
 
-                  <h3 className="text-lg md:text-xl font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+                  <h3 className="text-lg md:text-xl font-gilroy-medium  text-[#FF5F2D]">
                     {item.name}
                   </h3>
 
@@ -108,7 +108,7 @@ export default function CartPage() {
 
                   <div className="flex items-center gap-4">
 
-                    <p className="text-lg font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+                    <p className="text-lg font-gilroy-medium  text-[#FF5F2D]">
                       ₹ {(item.price * item.quantity).toFixed(2)}
                     </p>
 
@@ -134,7 +134,7 @@ export default function CartPage() {
 
           <div className="p-6 border rounded-xl shadow-sm">
 
-            <h2 className="text-xl font-gilroy-medium mb-6 font-gilroy-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+            <h2 className="text-xl font-gilroy-medium mb-6 font-gilroy-medium  text-[#FF5F2D]">
               Order Summary
             </h2>
 
@@ -168,7 +168,7 @@ export default function CartPage() {
 
               <span>Total</span>
 
-              <span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">
+              <span className=" text-[#FF5F2D]">
                 ₹ {total.toFixed(2)}
               </span>
 
@@ -176,7 +176,7 @@ export default function CartPage() {
 
             <Link href="/checkout">
 
-              <button className="w-full py-3 font-gilroy-medium rounded-lg font-medium text-white bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] hover:opacity-90 transition">
+              <button className="w-full py-3 font-gilroy-medium rounded-lg font-medium text-white bg-[#FF5F2D] hover:opacity-90 transition">
                 Continue to Checkout
               </button>
 

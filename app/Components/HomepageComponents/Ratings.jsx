@@ -57,7 +57,7 @@ className="text-center mb-14"
 >
 
 <h2 className="text-3xl md:text-4xl text-gray-900">
-Customer <span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">Say!</span>
+Customer <span className=" text-[#FF5F2D]">Say!</span>
 </h2>
 
 <p className="text-gray-500 mt-3 text-lg">
@@ -100,7 +100,7 @@ transition
 >
 
 
-<div className="flex text-orange-400">
+<div className="flex text-[#FF5F2D]">
 {[...Array(5)].map((_,i)=>(
 <FaStar key={i}/>
 ))}
@@ -113,7 +113,7 @@ transition
 {item.name}
 </h4>
 
-<span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent text-sm">
+<span className=" text-[#FF5F2D] text-sm">
 ✓ Verified Buyer
 </span>
 
@@ -139,7 +139,7 @@ className="w-14 h-14 rounded-full object-cover"
 
 <div className="flex items-center gap-2 text-sm">
 
-<span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent font-semibold">
+<span className=" text-[#FF5F2D] font-semibold">
 {item.price}
 </span>
 

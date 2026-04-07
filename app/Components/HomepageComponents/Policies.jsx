@@ -54,7 +54,7 @@ export default function Policies() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className=" mx-auto px-6"
       >
 

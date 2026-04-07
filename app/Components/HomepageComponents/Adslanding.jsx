@@ -59,7 +59,7 @@ export default function ShopByCategory() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: false}}
         className="grid grid-cols-2 md:grid-cols-4 gap-4"
       >
 
@@ -69,7 +69,7 @@ export default function ShopByCategory() {
             variants={card}
             className="group cursor-pointer"
           >
-            <div className="bg-gray-100 h-[220px] flex items-center justify-center overflow-hidden rounded-3xl">
+            <div className="bg-gray-100 relative h-[220px] flex items-center justify-center overflow-hidden rounded-3xl">
 
               <motion.img
                 src={item.image}
@@ -78,7 +78,7 @@ export default function ShopByCategory() {
                 whileHover={{ scale: 1.15 }}
                 transition={{ duration: 0.4 }}
               />
-
+         <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/10 to-[#FF5F2D]/40  group-hover:to-[#FF5F2D]/70 transition-all duration-500" />
             </div>
 
             <div className="mt-3 flex items-center gap-2 text-sm">

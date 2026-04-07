@@ -2,45 +2,88 @@
 
 import { motion } from "framer-motion"
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+}
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" }
+  }
+}
+
+const imageAnim = {
+  hidden: { scale: 1.1, opacity: 0 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 1 }
+  }
+}
+
 export default function About() {
   return (
-    <section className=" text-white py-20 px-6">
+    <section className="text-white py-20 px-6 overflow-hidden">
 
-      <div className=" mx-auto">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false }}
+        className="mx-auto"
+      >
 
- <motion.h1
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-transition={{duration:0.6}}
-className="font-lufga-regular text-3xl md:text-6xl py-5 text-center text-black"
->
-About <span className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">arrowfly</span>
-</motion.h1>
+        {/* HEADING */}
+        <motion.h1
+          variants={fadeUp}
+          className="font-lufga-regular text-3xl md:text-6xl py-5 text-center text-black"
+        >
+          About{" "}
+          <span className="text-[#FF5F2D]">
+            Granest
+          </span>
+        </motion.h1>
 
-<motion.p
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-transition={{duration:0.6}}
-className="font-gilroy-light text-xl md:text-xl text-black mb-10 text-center"
->
-Unlock your potential with our quality products from <span className="font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-transparent">Arrowfly</span>
-</motion.p>
+        {/* SUBTEXT */}
+        <motion.p
+          variants={fadeUp}
+          className="font-gilroy-light text-xl text-black mb-10 text-center"
+        >
+          Unlock your potential with our quality products from{" "}
+          <span className="text-[#FF5F2D] font-lufga-medium">Granest</span>
+        </motion.p>
 
         {/* TOP GRID */}
         <div className="grid md:grid-cols-3 gap-8 items-start">
 
           {/* LARGE IMAGE */}
-          <div className="md:col-span-2">
-            <img
-              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+          <motion.div
+            variants={imageAnim}
+            className="md:col-span-2 overflow-hidden rounded-xl"
+          >
+            <motion.img
+              src="/Images/G1.png"
               className="w-full h-[350px] md:h-[420px] object-cover"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6 }}
             />
-          </div>
+          </motion.div>
 
           {/* TEXT + SMALL IMAGE */}
           <div className="flex flex-col gap-8">
 
-            <p className="text-gray-700 text-sm leading-relaxed font-lufga-light">
+            <motion.p
+              variants={fadeUp}
+              className="text-gray-700 text-sm leading-relaxed font-lufga-light"
+            >
               This series explores presence through form, stillness,
               and repetition. The image is not built around action,
               but around pause — where the body becomes structure and
@@ -50,26 +93,34 @@ Unlock your potential with our quality products from <span className="font-lufga
               tension between clarity and disappearance.
               Fashion is treated as a sculptural element —
               not decoration, but a quiet extension of the form.
-            </p>
+            </motion.p>
 
-            <img
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
-              className="w-full h-[200px] object-cover"
-            />
+            <motion.div
+              variants={imageAnim}
+              className="overflow-hidden rounded-xl"
+            >
+              <motion.img
+                src="/Images/G2.png"
+                className="w-full h-[200px] object-cover"
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.5 }}
+              />
+            </motion.div>
 
           </div>
 
         </div>
 
-
         {/* SERVICES SECTION */}
         <div className="grid md:grid-cols-2 gap-16 mt-24">
 
           {/* LEFT TEXT */}
-          <div>
-
+          <motion.div variants={fadeUp}>
             <h3 className="text-4xl md:text-5xl font-gilroy-regular text-black leading-tight">
-              We Provide <span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">Various Services</span>
+              We Have{" "}
+              <span className="text-[#FF5F2D]">
+              Brands
+              </span>
             </h3>
 
             <p className="text-gray-700 mt-6 text-sm font-lufga-light leading-relaxed max-w-md">
@@ -78,32 +129,46 @@ Unlock your potential with our quality products from <span className="font-lufga
               light, and intention — where fashion becomes structure
               and images speak quietly, yet precisely.
             </p>
-
-          </div>
-
+          </motion.div>
 
           {/* SERVICE LIST */}
-          <div className="space-y-8 text-black font-gilroy-regular">
+          <div className="space-y-6 text-black font-gilroy-regular">
 
             {[
-              "Art Direction",
-              "Fashion Photography",
-              "Visual Storytelling",
-              "Creative Concept",
-              "Editorial Styling"
+              "Puma",
+              "Nike",
+              "CalvinKlen",
+              "LouisPhilippe",
+              "Sara"
             ].map((service, i) => (
 
-              <div key={i} className="border-b border-gray-700 pb-6 flex justify-between items-center">
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                whileHover={{ x: 10 }}
+                className="border-b border-gray-300 pb-6 flex justify-between items-center cursor-pointer group"
+              >
 
-                <span className="text-lg tracking-wide ">
-                <span className="bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">  {String(i + 1).padStart(2, "0")}</span> {service}
+                <span className="text-lg tracking-wide flex items-center gap-3">
+
+                  <span className=" text-[#FF5F2D]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="group-hover:text-[#FF5F2D] transition duration-300">
+                    {service}
+                  </span>
+
                 </span>
 
-                <span className="text-gray-400 text-xl bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB] bg-clip-text text-transparent">
+                <motion.span
+                  className="text-xl  text-[#FF5F2D]"
+                  whileHover={{ rotate: 45 }}
+                >
                   ↗
-                </span>
+                </motion.span>
 
-              </div>
+              </motion.div>
 
             ))}
 
@@ -111,7 +176,7 @@ Unlock your potential with our quality products from <span className="font-lufga
 
         </div>
 
-      </div>
+      </motion.div>
 
     </section>
   )
