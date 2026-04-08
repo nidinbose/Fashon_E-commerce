@@ -115,7 +115,8 @@ export default function Navbar(){
               <Image
               src={`/Images/Lg1.png`}
               width={30}
-              height={30}/> Granest
+              height={30}
+              alt="granest"/> Granest
 
               {cut && (
 

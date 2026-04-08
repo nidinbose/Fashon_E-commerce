@@ -24,7 +24,7 @@ export default function ProductShowcase() {
   const [active, setActive] = useState(0)
 
   return (
-    <section className="w-full py-20 px-6 bg-white h-full">
+    <section className="w-full xl:py-20 px-6 bg-white h-full">
 
       <div className="max-w-7xl mx-auto">
 

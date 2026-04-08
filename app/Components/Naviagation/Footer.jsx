@@ -15,7 +15,7 @@ const fadeUp = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black px-6 pt-24 pb-10 overflow-hidden border-t border-gray-200">
+    <footer className="bg-white text-black px-6 pt-24 pb-10 overflow-hidden font-gilaroy-regular border-t border-gray-200 text-xl">
 
       <motion.div
         initial="hidden"
@@ -33,20 +33,20 @@ export default function Footer() {
             <div className="flex items-center gap-3">
 
               <Image
-                src="/Images/Lg1.png" // 👉 replace with your logo path
+                src="/Images/Lg1.png"
                 alt="Granest Logo"
                 width={42}
                 height={42}
                 className="object-contain"
               />
 
-              <h2 className="text-2xl md:text-3xl font-lufga-regular tracking-wide">
+              <h2 className="text-2xl md:text-3xl font-lufga-regular tracking-wide ">
                 Granest
               </h2>
 
             </div>
 
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-500 text-sm font-gilaroy-regular leading-relaxed max-w-xs">
               Timeless fashion crafted with intention. Discover pieces that define your everyday style.
             </p>
 
@@ -57,7 +57,7 @@ export default function Footer() {
             <h3 className="mb-4 text-sm tracking-widest uppercase text-gray-400">
               Shop
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-[17px]">
               {["New Arrivals", "Men", "Women", "Accessories"].map((item, i) => (
                 <li key={i} className="hover:text-[#FF5F2D] transition cursor-pointer">
                   {item}
@@ -68,10 +68,10 @@ export default function Footer() {
 
           {/* COMPANY */}
           <motion.div variants={fadeUp}>
-            <h3 className="mb-4 text-sm tracking-widest uppercase text-gray-400">
+            <h3 className="mb-4 text-sm tracking-widest font-lufga-regular uppercase text-gray-400">
               Company
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-[17px] font-gilaroy-regular">
               {["About", "Journal", "Careers", "Contact"].map((item, i) => (
                 <li key={i} className="hover:text-[#FF5F2D] transition cursor-pointer">
                   {item}
@@ -92,7 +92,7 @@ export default function Footer() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.15 }}
-                  className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 cursor-pointer hover:border-transparent hover:bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] hover:text-white transition"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 cursor-pointer hover:border-transparent hover:bg-[#FF5F2D] hover:text-white transition"
                 >
                   <Icon size={18} />
                 </motion.div>
