@@ -45,7 +45,7 @@ return(
 
 <section className="w-full py-14 overflow-hidden font-gilroy-regular">
 
-<div className="mx-auto px-6">
+<div className="px-6 xl:px-0 max-w-7xl mx-auto">
 
 
 <motion.div

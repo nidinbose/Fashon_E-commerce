@@ -48,7 +48,7 @@ export default function Policies() {
   }
 
   return (
-    <section className="py-16 overflow-hidden">
+    <section className="py-16 max-w-7xl mx-auto overflow-hidden">
 
       <motion.div
         variants={container}

@@ -38,7 +38,7 @@ const Card = memo(function Card({ item, index }) {
     <motion.div
       variants={card}
       whileHover={{ scale: 1.03 }}
-      className={`group relative rounded-2xl overflow-hidden transform-gpu will-change-transform ${
+      className={`group relative rounded-2xl overflow-hidden transform-gpu will-change-transform  ${
         index % 2 === 0 ? "row-span-2" : ""
       }`}
     >
@@ -78,9 +78,9 @@ const Card = memo(function Card({ item, index }) {
 
 export default function Shop() {
   return (
-    <section className="py-10">
+    <section className="py-10 ">
 
-      <div className="mx-auto px-6">
+      <div className="px-6 xl:px-0 max-w-7xl mx-auto">
 
         <motion.h1
           initial="hidden"

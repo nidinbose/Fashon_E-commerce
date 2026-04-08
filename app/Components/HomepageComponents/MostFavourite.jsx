@@ -55,7 +55,7 @@ price:"3000"
 },
 ]
 
-export default function LandingProducts() {
+export default function MostFavourite() {
 
 const [addedIndex,setAddedIndex] = useState(null)
 
@@ -71,7 +71,7 @@ setAddedIndex(null)
 
 return (
 
-<div className="mx-auto px-4 md:px-7">
+<div className="mx-auto px-6 xl:px-0 h-full max-w-7xl">
 
 <motion.h1
 initial={{opacity:0,y:20}}
@@ -79,7 +79,7 @@ animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
 className="font-lufga-regular text-3xl text-center md:text-6xl py-5 "
 >
-Most <span className="text-[#FF5F2D]">Favorite</span>
+Most <span className="text-[#FF5F2D]">favourite</span>
 </motion.h1>
 
 <motion.p
@@ -92,7 +92,7 @@ Unlock your potential with our quality products from <span className="font-lufga
 </motion.p>
 
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 space-y-2 md:gap-6">
 
 {Items.map((item,index)=>(
 
@@ -111,7 +111,7 @@ className="group p-3 border border-gray-300 rounded-3xl overflow-hidden bg-white
 <motion.img
 src={item.image}
 alt={item.name}
-className="h-96 w-full object-cover rounded-3xl"
+className="h-100 md:h-96 xl:h-80 w-full object-cover rounded-3xl"
 whileHover={{scale:1.0}}
 transition={{duration:0.4}}
 />
@@ -122,9 +122,11 @@ transition={{duration:0.4}}
 
 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
 
+<Link href={`/Product/Viewdeatiles/${item?._id}`}>
 <div className="rotate-[-40deg] text-9xl font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-[#FF5F2D]">
 →
 </div>
+</Link>
 
 </div>
 
@@ -171,7 +173,7 @@ Added to Cart
 
 <div>
 
-<h1 className="text-black font-gilroy-regular text-xl max-w-md">
+<h1 className="text-black font-gilroy-regular text-[17px] max-w-md">
 {item.name}
 </h1>
 

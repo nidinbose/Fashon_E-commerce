@@ -24,7 +24,7 @@ export default function ProductShowcase() {
   const [active, setActive] = useState(0)
 
   return (
-    <section className="w-full xl:py-20 px-6 bg-white h-full">
+    <section className="w-full py-6 xl:py-20 px-6 bg-white h-full">
 
       <div className="max-w-7xl mx-auto">
 
@@ -91,7 +91,7 @@ export default function ProductShowcase() {
                   className="absolute bottom-6 left-6 text-white"
                 >
                   <h3 className="text-xl font-semibold">{product.name}</h3>
-                  <p className="text-sm opacity-80">{product.price}</p>
+                 
                 </motion.div>
 
               </motion.div>

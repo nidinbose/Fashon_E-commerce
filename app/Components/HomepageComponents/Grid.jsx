@@ -30,7 +30,7 @@ const items = [
 
 export default function Grid() {
   return (
-    <section className="w-full px-4 md:px-10 py-10 bg-white">
+    <section className=" px-6 xl:px-0 max-w-7xl mx-auto py-10 bg-white">
 
       <h2 className="text-center font-gilroy-regular text-2xl md:text-4xl font-semibold tracking-wide mb-8">
         YOUR GETAWAY <span className="text-[#FF5F2D]">GRANEST</span>

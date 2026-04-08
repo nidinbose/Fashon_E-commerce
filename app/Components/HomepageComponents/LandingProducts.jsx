@@ -92,7 +92,7 @@ Unlock your potential with our quality products from <span className="font-lufga
 </motion.p>
 
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 space-y-2 md:gap-6">
 
 {Items.map((item,index)=>(
 
@@ -173,7 +173,7 @@ Added to Cart
 
 <div>
 
-<h1 className="text-black font-gilroy-regular text-xl max-w-md">
+<h1 className="text-black font-gilroy-regular text-[17px] max-w-md">
 {item.name}
 </h1>
 

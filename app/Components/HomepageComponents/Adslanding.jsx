@@ -45,7 +45,7 @@ const card = {
 
 export default function ShopByCategory() {
   return (
-    <section className="mx-auto px-6 py-20">
+    <section className="mx-auto px-6 xl:px-0 max-w-7xl  py-20">
 
 
       <div className="mb-10 text-center">

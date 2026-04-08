@@ -31,7 +31,7 @@ const imageAnim = {
 
 export default function About() {
   return (
-    <section className="text-white py-20 px-6 overflow-hidden">
+    <section className="text-white py-20 px-6 px-6 xl:px-0 max-w-7xl mx-auto overflow-hidden">
 
       <motion.div
         variants={container}
