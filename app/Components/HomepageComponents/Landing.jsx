@@ -11,18 +11,18 @@ const MotionImage = motion(Image)
 const images = [
   {
     mobile: "/Images/MR1.jpg",
-    tablet: "/Images/G1-tablet.webp",
+    tablet: "/Images/TT1.jpg",
     desktop: "/Images/G1.webp",
   },
   {
-    mobile: "/Images/MR2.jpg",
-    tablet: "/Images/G2-tablet.webp",
-    desktop: "/Images/G2.webp",
+    mobile: "/Images/PP2.jpg",
+    tablet: "/Images/TT2.jpg",
+    desktop: "/Images/MR1.jpg",
   },
   {
-    mobile: "/Images/MR3.jpg",
-    tablet: "/Images/G3-tablet.webp",
-    desktop: "/Images/G3.webp",
+    mobile: "/Images/MM3.jpg",
+    tablet: "/Images/TT3.jpg",
+    desktop: "/Images/G1.webp",
   },
 
 ]
@@ -35,7 +35,6 @@ export default function Landing() {
 
   const word = "Granest"
 
-  // ✅ Detect screen size
   useEffect(() => {
     const updateScreen = () => {
       if (window.innerWidth < 640) {
@@ -53,7 +52,6 @@ export default function Landing() {
     return () => window.removeEventListener("resize", updateScreen)
   }, [])
 
-  // ✅ Loader delay
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
@@ -62,7 +60,6 @@ export default function Landing() {
     return () => clearTimeout(timer)
   }, [])
 
-  // ✅ Image slider
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length)
@@ -71,7 +68,6 @@ export default function Landing() {
     return () => clearInterval(interval)
   }, [])
 
-  // ✅ Typing effect
   useEffect(() => {
     let i = 0
     setText("")
@@ -105,8 +101,6 @@ export default function Landing() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Main Content */}
       {!loading && (
         <>
           {/* Background Images */}
@@ -127,8 +121,6 @@ export default function Landing() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
               />
-
-              {/* Reveal Animation */}
               <MotionImage
                 key={`reveal-${index}`}
                 src={images[index][screen]}
@@ -146,15 +138,9 @@ export default function Landing() {
               />
 
             </AnimatePresence>
-
-            {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-[#FF5F2D]/40 transition-all duration-500" />
           </div>
-
-          {/* Content */}
           <div className="relative z-10 h-full flex flex-col justify-between px-6 md:px-16 py-10 text-white">
-
-            {/* Top Text */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -165,8 +151,6 @@ export default function Landing() {
                 Exclusive & <br /> Trending Collection
               </p>
             </motion.div>
-
-            {/* Title */}
             <div className="absolute bottom-20 right-6 md:right-16">
               <h1 className="font-serif text-[80px] sm:text-[130px] md:text-[150px] lg:text-[200px] leading-none tracking-tight">
 
@@ -181,8 +165,6 @@ export default function Landing() {
                 <span className="animate-pulse">|</span>
               </h1>
             </div>
-
-            {/* Progress Bars */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4">
               {images.map((_, i) => (
                 <div

@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 
 const products = [
-  { id: 1, name: "Oversized Jacket", price: "$120", image: "/Images/S4.jpg" },
-  { id: 2, name: "Minimal Shirt", price: "$60", image: "/Images/S2.jpg" },
-  { id: 3, name: "Classic Hoodie", price: "$90", image: "/Images/S3.jpg" },
+  { id: 1, name: "Oversized Jacket", price: "$120", image: "/Images/PP5.jpg" },
+  { id: 2, name: "Trouser`s", price: "$60", image: "/Images/S2.jpg" },
+  { id: 3, name: "Womens suite`s", price: "$90", image: "/Images/PP4.jpg" },
   { id: 4, name: "Street Denim", price: "$110", image: "/Images/S1.jpg" }
 ]
 
@@ -27,8 +27,6 @@ export default function ProductShowcase() {
     <section className="w-full py-6 xl:py-20 px-6 bg-white h-full">
 
       <div className="max-w-7xl mx-auto">
-
-        {/* HEADING */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -43,13 +41,11 @@ export default function ProductShowcase() {
             </span>
           </h2>
 
-          <p className="text-gray-500 mt-4 text-sm md:text-base max-w-xl mx-auto">
+          <p className="text-gray-500 mt-4 text-sm font-gilroy-regular md:text-base max-w-xl mx-auto">
             Explore timeless fashion pieces designed with precision, minimalism,
             and modern elegance.
           </p>
         </motion.div>
-
-        {/* PRODUCT LIST */}
         <div
           className="grid grid-cols-1 gap-4 sm:flex sm:h-[400px]"
           onMouseLeave={() => setActive(0)}
@@ -71,19 +67,14 @@ export default function ProductShowcase() {
                 `}
                 transition={{ type: "spring", stiffness: 90, damping: 20 }}
               >
-
-                {/* IMAGE */}
                 <motion.img
                   src={product.image}
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.6 }}
                 />
-
-                {/* OVERLAY */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/10 to-[#FF5F2D]/40  group-hover:to-[#FF5F2D]/70 transition-all duration-500" />
 
-                {/* CONTENT */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isActive ? 1 : 0, y: isActive ? 0 : 20 }}
