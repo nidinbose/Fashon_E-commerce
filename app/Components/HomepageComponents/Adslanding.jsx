@@ -6,23 +6,44 @@ const categories = [
   {
     title: "Sneakers",
     count: 16,
-    image: "https://grailify.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0VRQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2e77cb319946c7643b69c4a52a1ee1565515f645/image"
+    image: "/Images/C1.jpg"
   },
   {
-    title: "Ankle Boots",
+    title: "T-shirts",
     count: 8,
-    image: "https://i.etsystatic.com/37795650/r/il/9bd5ed/5690549897/il_570xN.5690549897_5n79.jpg"
+    image: "/Images/C2.jpg"
   },
   {
-    title: "Moccasins",
+    title: "Trousers",
     count: 12,
-    image: "https://t4.ftcdn.net/jpg/02/47/19/43/360_F_247194310_MeOhnDyH6H92qmayycBHUDY8UvVa6TvJ.jpg"
+    image: "/Images/C3.jpg"
   },
   {
-    title: "Boots",
+    title: "Ladies-tops",
     count: 23,
-    image: "https://media.istockphoto.com/id/1324844508/photo/gorgeous-woman-wearing-beautiful-maxi-dress-posing-against-wall-with-a-wild-grape.jpg?s=612x612&w=0&k=20&c=BJrcuLt0m5Hm6zOhgO-E0TGqIxzWKdecgw1xcOu1aN4="
-  }
+    image: "/Images/C4.jpg"
+  },
+    {
+    title: "Bags",
+    count: 23,
+    image: "/Images/C5C.jpg"
+  },
+      {
+    title: "Hoodies",
+    count: 23,
+    image: "/Images/C6.jpg"
+  },
+      {
+    title: "Shirts",
+    count: 23,
+    image: "/Images/C7.jpg"
+  },
+        {
+    title: "Aminities",
+    count: 23,
+    image: "/Images/C8.jpg"
+  },
+
 ]
 
 const container = {
@@ -60,7 +81,7 @@ export default function ShopByCategory() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false}}
-        className="grid grid-cols-2 md:grid-cols-4 gap-4"
+        className="grid grid-cols-2 md:grid-cols-4 gap-4 space-y-3"
       >
 
         {categories.map((item, index) => (
