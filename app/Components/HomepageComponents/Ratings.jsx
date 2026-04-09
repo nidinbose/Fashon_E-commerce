@@ -56,11 +56,11 @@ viewport={{once:true}}
 className="text-center mb-14"
 >
 
-<h2 className="text-3xl md:text-4xl text-gray-900">
+<h2 className="text-3xl md:text-5xl font-gilroy-regular text-gray-900">
 Customer <span className=" text-[#FF5F2D]">Say!</span>
 </h2>
 
-<p className="text-gray-500 mt-3 text-lg">
+<p className="text-gray-500 mt-3 text-sm font-gilroy-regular md:text-base">
 Customers love our products and we always strive to please them all.
 </p>
 

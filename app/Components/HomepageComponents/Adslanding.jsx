@@ -95,7 +95,7 @@ export default function ShopByCategory() {
               <motion.img
                 src={item.image}
                 alt={item.title}
-                className="h-[220px] w-full object-cover"
+                className="h-[240px] w-full object-cover"
                 whileHover={{ scale: 1.15 }}
                 transition={{ duration: 0.4 }}
               />

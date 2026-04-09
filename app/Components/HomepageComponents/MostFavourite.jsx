@@ -77,18 +77,18 @@ return (
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-lufga-regular text-3xl text-center md:text-6xl py-5 "
+className="font-gilroy-regular text-3xl text-center md:text-6xl py-5 "
 >
-Most <span className="text-[#FF5F2D]">favourite</span>
+Most <span className="text-[#FF5F2D]">Favourite</span>
 </motion.h1>
 
 <motion.p
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-gilroy-light text-xl text-center md:text-xl mb-10 "
+className=" text-sm font-gilroy-regular md:text-base text-center mb-10 "
 >
-Unlock your potential with our quality products from <span className="font-lufga-medium bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-[#FF5F2D]">Granest</span>
+Unlock your potential with our quality products from <span className="text-[#FF5F2D]">Granest</span>
 </motion.p>
 
 

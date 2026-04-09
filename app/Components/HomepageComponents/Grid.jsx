@@ -5,25 +5,25 @@ import { motion } from "framer-motion"
 
 const items = [
   {
-    title: "BIKINIS",
-    image: "/Images/G1.webp",
+    title: "Trending collections",
+    image: "/Images/G2.jpg",
     span: "col-span-2 row-span-2",
   },
   {
     title: "ONE-PIECES",
-    image: "/Images/L2.jpg",
+    image: "/Images/G3.jpg",
   },
   {
     title: "DRESSES",
-    image: "/Images/L2.jpg",
+    image: "/Images/G4.jpg",
   },
   {
     title: "ROMPERS & JUMPSUITS",
-    image: "/Images/L2.jpg",
+    image: "/Images/G6.jpg",
   },
   {
-    title: "COVER-UPS",
-    image: "/Images/L2.jpg",
+    title: "LADIES-WEAR",
+    image: "/Images/G5.jpg",
   },
 
 ]
@@ -32,7 +32,7 @@ export default function Grid() {
   return (
     <section className=" px-6 xl:px-0 max-w-7xl mx-auto py-10 bg-white">
 
-      <h2 className="text-center font-gilroy-regular text-2xl md:text-4xl font-semibold tracking-wide mb-8">
+      <h2 className="text-center font-gilroy-regular text-2xl md:text-6xl  tracking-wide mb-8">
         YOUR GETAWAY <span className="text-[#FF5F2D]">GRANEST</span>
       </h2>
 
@@ -58,11 +58,11 @@ export default function Grid() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300" />
+         
 
             {/* Label */}
             <div className="absolute bottom-4 left-4 right-4">
-              <p className="text-white text-sm md:text-base font-medium tracking-wide">
+              <p className="text-white text-sm md:text-base font-medium font-gilroy-regular tracking-wide">
                 {item.title}
               </p>
 

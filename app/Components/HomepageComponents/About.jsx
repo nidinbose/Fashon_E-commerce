@@ -44,7 +44,7 @@ export default function About() {
         {/* HEADING */}
         <motion.h1
           variants={fadeUp}
-          className="font-lufga-regular text-3xl md:text-6xl py-5 text-center text-black"
+          className="font-gilroy-regular text-3xl md:text-6xl py-5 text-center text-black"
         >
           About{" "}
           <span className="text-[#FF5F2D]">
@@ -55,10 +55,10 @@ export default function About() {
         {/* SUBTEXT */}
         <motion.p
           variants={fadeUp}
-          className="font-gilroy-light text-xl text-black mb-10 text-center"
+          className="text-sm font-gilroy-regular md:text-base text-black mb-10 text-center"
         >
           Unlock your potential with our quality products from{" "}
-          <span className="text-[#FF5F2D] font-lufga-medium">Granest</span>
+          <span className="text-[#FF5F2D] ">Granest</span>
         </motion.p>
 
         {/* TOP GRID */}

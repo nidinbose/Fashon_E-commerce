@@ -26,9 +26,9 @@ const card = {
 }
 
 const ITEMS = [
-  { title: "Shoes", img: "/Images/S1.jpg" },
+  { title: "Shoes", img: "/Images/SH2.jpg" },
   { title: "Pants", img: "/Images/S3.jpg" },
-  { title: "Tshirts", img: "/Images/S2.jpg" },
+  { title: "Sale", img: "/Images/SH6.jpg" },
   { title: "Ladies top", img: "/Images/S4.jpg" }
 ]
 
@@ -87,7 +87,7 @@ export default function Shop() {
           whileInView="show"
           viewport={{ once: true }}
           variants={card}
-          className="font-lufga-regular text-3xl md:text-6xl py-5 text-center"
+          className="font-gilroy-regular text-3xl md:text-6xl py-5 text-center"
         >
           Explore latest <span className="text-[#FF5F2D]">collection</span>
         </motion.h1>
@@ -97,10 +97,10 @@ export default function Shop() {
           whileInView="show"
           viewport={{ once: true }}
           variants={card}
-          className="font-gilroy-light text-xl mb-10 text-center"
+          className="text-sm font-gilroy-regular md:text-base mb-10 text-center"
         >
           Unlock your potential with our quality products from
-          <span className="text-[#FF5F2D]"> Arrowfly</span>
+          <span className="text-[#FF5F2D]"> Granest</span>
         </motion.p>
 
         <motion.div

@@ -34,7 +34,7 @@ export default function ProductShowcase() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-5xl font-lufga-regular text-black">
+          <h2 className="text-3xl md:text-5xl font-gilroy-regular text-black">
             Discover Our{" "}
             <span className="text-[#FF5F2D]">
               Latest Collection
