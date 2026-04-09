@@ -103,7 +103,7 @@ className=" text-sm font-gilroy-regular md:text-base text-center mb-10 "
 Unlock your potential with our quality products from <span className="text-[#FF5F2D]">Granest</span>
 </motion.p>
       {/* GRID → 2 COLS ON MOBILE */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
 
         {Items.map((item, index) => (
 
@@ -117,7 +117,7 @@ Unlock your potential with our quality products from <span className="text-[#FF5
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.03 }}
-              className="relative group p-2 md:p-3 border border-gray-300 rounded-3xl overflow-hidden bg-white"
+              className="relative group  md:p-3 md:border border-gray-300 rounded-3xl overflow-hidden bg-white"
             >
 
               {/* IMAGE */}
@@ -162,7 +162,7 @@ Unlock your potential with our quality products from <span className="text-[#FF5
                     {item.name}
                   </h1>
 
-                  <h2 className=" text-[#FF5F2D] font-lufga-regular text-sm">
+                  <h2 className=" text-[#FF5F2D] px-1 font-lufga-regular text-sm">
                     ₹{item.price}
                   </h2>
                 </div>
