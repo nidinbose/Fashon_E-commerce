@@ -2,219 +2,218 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { BsBag } from "react-icons/bs"
+import { BsBag, BsHeart, BsHeartFill } from "react-icons/bs"
 import Link from "next/link"
-import Loading from "../Naviagation/Loading"
 
 const Items = [
-{
-image:"https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
-name:"cef t-shirt men white",
-price:"3000",
-id:"1"
-},
-{
-image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
-name:"green t-shirt",
-price:"3000",
-id:"2"
-},
-{
-image:"https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
-name:"cef",
-price:"3000",
-id:"3"
-},
-{
-image:"https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
-name:"cef",
-price:"3000",
-id:"4"
-},
-{
-image:"https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
-name:"cef",
-price:"3000",
-id:"5"
-},
-{
-image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
-name:"green t-shirt",
-price:"3000"
-},,
-{
-image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
-name:"green t-shirt",
-price:"3000",
-id:"1"
-},,
-{
-image:"https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
-name:"green t-shirt",
-price:"3000"
-},
+  {
+    image: "https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
+    name: "cef t-shirt men white",
+    price: "3000",
+    id: "1"
+  },
+  {
+    image: "https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+    name: "green t-shirt",
+    price: "3000",
+    id: "2"
+  },
+  {
+    image: "https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
+    name: "cef",
+    price: "3000",
+    id: "3"
+  },
+  {
+    image: "https://uspoloassn.in/cdn/shop/files/1_1addd816-ce66-494e-8184-11223b7ebc6f_500x.jpg?v=1769097060",
+    name: "cef",
+    price: "3000",
+    id: "4"
+  },
+    {
+    image: "https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+    name: "green t-shirt",
+    price: "3000",
+    id: "2"
+  },
+    {
+    image: "https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+    name: "green t-shirt",
+    price: "3000",
+    id: "2"
+  },
+    {
+    image: "https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+    name: "green t-shirt",
+    price: "3000",
+    id: "2"
+  },
+    {
+    image: "https://img.freepik.com/premium-photo/green-shirt-with-word-t-shirt-front_1288657-158557.jpg",
+    name: "green t-shirt",
+    price: "3000",
+    id: "2"
+  },
 ]
 
 export default function LandingProducts() {
 
-const [addedIndex,setAddedIndex] = useState(null)
+  const [addedIndex, setAddedIndex] = useState(null)
+  const [favorites, setFavorites] = useState([])
 
-const handleAddToCart = (index,e)=>{
-e.stopPropagation()
+  const handleAddToCart = (index, e) => {
+    e.stopPropagation()
+    e.preventDefault()
 
-setAddedIndex(index)
+    setAddedIndex(index)
 
-setTimeout(()=>{
-setAddedIndex(null)
-},1200)
-}
+    setTimeout(() => {
+      setAddedIndex(null)
+    }, 1200)
+  }
 
-return (
+  const toggleFavorite = (index, e) => {
+    e.stopPropagation()
+    e.preventDefault()
 
-<div className="mx-auto px-6 xl:px-0 h-full max-w-7xl">
+    setFavorites((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
+    )
+  }
 
-<motion.h1
+  return (
+    <div className="mx-auto px-6 xl:px-0 h-full max-w-7xl">
+
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="font-gilroy-regular text-3xl text-center md:text-6xl py-5"
+      >
+        New <span className="text-[#FF5F2D]">Arrivals</span>
+      </motion.h1>
+      <motion.p
 initial={{opacity:0,y:20}}
 animate={{opacity:1,y:0}}
 transition={{duration:0.6}}
-className="font-gilroy-regular text-3xl text-center md:text-6xl py-5 "
+className=" text-sm font-gilroy-regular md:text-base text-center mb-10 "
 >
-New <span className="text-[#FF5F2D]">Arrivals</span>
-</motion.h1>
-
-<motion.p
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-transition={{duration:0.6}}
-className="font-gilroy-light  text-center text-sm font-gilroy-regular md:text-base mb-10 "
->
-Unlock your potential with our quality products from <span className=" text-[#FF5F2D]">Granest</span>
+Unlock your potential with our quality products from <span className="text-[#FF5F2D]">Granest</span>
 </motion.p>
+      {/* GRID → 2 COLS ON MOBILE */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-6">
 
+        {Items.map((item, index) => (
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 space-y-2 md:gap-6">
+          <Link
+            key={index}
+            href={`/Product/Viewdeatiles/${item?.id}`}
+            className="block"
+          >
 
-{Items.map((item,index)=>(
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03 }}
+              className="relative group p-2 md:p-3 border border-gray-300 rounded-3xl overflow-hidden bg-white"
+            >
 
-<motion.div
-key={index}
-initial={{opacity:0,y:40}}
-whileInView={{opacity:1,y:0}}
-viewport={{once:false}}
-transition={{duration:0.5, delay:index*0.1}}
-whileHover={{scale:1.03}}
-className="group p-3 border border-gray-300 rounded-3xl overflow-hidden bg-white"
->
+              {/* IMAGE */}
+              <div className="relative overflow-hidden">
 
-<Link href={`/Product/Viewdeatiles/${item?.id}`}>
-<div className="relative overflow-hidden">
-<motion.img
-src={item.image}
-alt={item.name}
-className="h-100 md:h-96 xl:h-80 w-full object-cover rounded-3xl"
-whileHover={{scale:1.0}}
-transition={{duration:0.4}}
-/>
+                <motion.img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-50 sm:h-96 xl:h-80 w-full object-cover rounded-3xl"
+                />
 
-<div className="p-2 font-gilroy-medium absolute top-3 right-3 text-sm rounded-sm bg-[#FF5F2D]">
-<p className="text-xs text-white font-gilroy-light">limited stock</p>
-</div>
+                {/* ❤️ FAVORITE ICON */}
+                <div className="absolute top-3 right-3 z-20">
+                  <motion.div
+                    whileTap={{ scale: 0.8 }}
+                    whileHover={{ scale: 1.15 }}
+                    onClick={(e) => toggleFavorite(index, e)}
+                    className="bg-blur-xl bg-black/20  p-2 rounded-full shadow-lg cursor-pointer"
+                  >
+                    {favorites.includes(index) ? (
+                      <BsHeartFill className="text-[#FF5F2D] text-sm" />
+                    ) : (
+                      <BsHeart className="text-white text-sm" />
+                    )}
+                  </motion.div>
+                </div>
 
-<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                {/* ARROW */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                  <div className="rotate-[-40deg] text-7xl md:text-6xl font-gilroy-light text-[#FF5F2D]">
+                    →
+                  </div>
+                </div>
 
-<Link href={`/Product/Viewdeatiles/${item?._id}`}>
-<div className="rotate-[-40deg] text-9xl font-gilroy-light bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-[#FF5F2D]">
-→
-</div>
-</Link>
+              </div>
 
-</div>
+              {/* CONTENT */}
+              <div className="flex items-center justify-between pt-3">
 
-<AnimatePresence>
+                <div>
+                  <h1 className="text-black font-gilroy-regular text-xs md:text-[17px]">
+                    {item.name}
+                  </h1>
 
-{addedIndex === index && (
+                  <h2 className=" text-[#FF5F2D] font-lufga-regular text-sm">
+                    ₹{item.price}
+                  </h2>
+                </div>
 
-<motion.div
-initial={{scale:0.8, opacity:0}}
-animate={{scale:1, opacity:1}}
-exit={{scale:0.8, opacity:0}}
-transition={{duration:0.3}}
-className="absolute inset-0 flex items-center justify-center bg-[#FF5F2D] backdrop-blur-sm"
->
+                <div className="flex gap-3 text-lg md:text-3xl text-black items-center">
 
-<motion.div
-initial={{y:40}}
-animate={{y:0}}
-exit={{y:40}}
-className="text-white text-lg font-gilroy-medium flex flex-col items-center gap-3"
->
+                  {/* 🛍️ BAG */}
+                  <motion.div
+                    whileHover={{ scale: 1.25, rotate: -10 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="cursor-pointer z-20"
+                    onClick={(e) => handleAddToCart(index, e)}
+                  >
+                    <BsBag />
+                  </motion.div>
 
-<div className="flex items-center gap-2 text-white font-gilroy-regular">
-<BsBag className="text-2xl text-white animate-bounce"/>
+                  {/* ARROW ICON */}
+                  <motion.div
+                    whileHover={{ x: 10, scale: 1.2 }}
+                    className="cursor-pointer rotate-[-40deg] font-gilroy-light text-[#FF5F2D]"
+                  >
+                    →
+                  </motion.div>
 
-Added to Cart
-</div>
+                </div>
 
+              </div>
 
+              {/* ADD TO CART */}
+              <AnimatePresence>
+                {addedIndex === index && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="absolute inset-0 flex items-center justify-center bg-[#FF5F2D] z-30"
+                  >
+                    <div className="text-white flex items-center gap-2 font-gilroy-regular text-sm md:text-base">
+                      <BsBag className="animate-bounce" />
+                      Added to Cart
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-</motion.div>
+            </motion.div>
 
-</motion.div>
+          </Link>
+        ))}
 
-)}
-
-</AnimatePresence>
-
-</div>
-</Link>
-
-
-<div className="flex items-center justify-between pt-3">
-
-<div>
-
-<h1 className="text-black font-gilroy-regular text-[17px] max-w-md">
-{item.name}
-</h1>
-
-<h2 className="bg-gradient-to-r from-[#FF902F] via-[#723CEB] to-[#4C11CE] bg-clip-text text-[#FF5F2D] font-lufga-regular">
-Price : ₹{item.price}
-</h2>
-
-</div>
-
-
-<div className="flex gap-3 text-3xl text-black items-center">
-
-<motion.div
-whileHover={{ scale: 1.25, rotate: -10 }}
-whileTap={{ scale: 0.9 }}
-transition={{ type: "spring", stiffness: 300 }}
-className="cursor-pointer"
-onClick={(e)=>handleAddToCart(index,e)}
->
-<BsBag/>
-</motion.div>
-
-<motion.div
-whileHover={{ x: 10, scale: 1.2 }}
-transition={{ type: "spring", stiffness: 300 }}
-className="cursor-pointer rotate-[-40deg] font-gilroy-light text-[#FF5F2D]"
->
-→
-</motion.div>
-
-</div>
-
-</div>
-
-</motion.div>
-
-))}
-
-</div>
-
-</div>
-
-)
+      </div>
+    </div>
+  )
 }
