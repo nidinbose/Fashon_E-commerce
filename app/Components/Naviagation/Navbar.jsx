@@ -140,16 +140,19 @@ export default function Navbar(){
 
     <div className="hidden md:flex gap-7 font-gilroy-medium text-black text-[15px]">
   <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
-    Home
+    Men
   </Link>
   <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
-    Products
+   Women
   </Link>
   <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
-    Pricing
+    Shoues
+  </Link>
+    <Link href="/" className="hover:text-[#FF5F2D] transition-colors duration-200">
+   Hoodies
   </Link>
   <Link href="/" className="hover:text-[#FF5F2D]  transition-colors duration-200">
-    Contact
+    Aminities
   </Link>
 </div>
 
@@ -157,8 +160,10 @@ export default function Navbar(){
         <div className="hidden md:flex gap-5 items-center">
 
           <IoIosSearch className="w-6 h-6 text-black  hover:text-[#FF5F2D] cursor-pointer"/>
-          <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
-
+          
+     <Link href="/Auth/Login">
+            <FiUser className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
+          </Link>
           <Link href="/Cart">
             <BsBag className="w-6 h-6 text-black hover:text-[#FF5F2D] cursor-pointer"/>
           </Link>
@@ -223,11 +228,11 @@ export default function Navbar(){
             >
 
               <Link href="/" onClick={closeMenu}>
-                <motion.div variants={item}>Home</motion.div>
+                <motion.div variants={item}>Men</motion.div>
               </Link>
 
               <Link href="/" onClick={closeMenu}>
-                <motion.div variants={item}>Products</motion.div>
+                <motion.div variants={item}>Women</motion.div>
               </Link>
 
               <Link href="/" onClick={closeMenu}>

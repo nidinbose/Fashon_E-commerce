@@ -31,8 +31,6 @@ const ITEMS = [
   { title: "Sale", img: "/Images/SH6.jpg" },
   { title: "Ladies top", img: "/Images/S4.jpg" }
 ]
-
-// ✅ FIXED (removed : any)
 const Card = memo(function Card({ item, index }) {
   return (
     <motion.div
@@ -57,7 +55,7 @@ const Card = memo(function Card({ item, index }) {
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ delay: 0.1 }}
         className="absolute bottom-6 left-6 text-white text-3xl font-serif"
       >
@@ -85,7 +83,7 @@ export default function Shop() {
         <motion.h1
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           variants={card}
           className="font-gilroy-regular text-3xl md:text-6xl py-5 text-center"
         >

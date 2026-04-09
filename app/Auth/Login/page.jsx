@@ -6,21 +6,20 @@ import Link from "next/link";
 
 export default function Login(){
   return (
-    <div className="relative min-h-screen grid xl:grid-cols-2 px-6 md:px-10 lg:px-16 py-10 bg-white">
+    <div className="relative min-h-full grid xl:grid-cols-2 px-6  xl:px-0 max-w-7xl mx-auto py-10 bg-white mt-9 md:mt-14">
       <div className="flex flex-col justify-between">
 
         <div>
 
           <h1 className="text-black font-gilroy-medium
-          text-4xl sm:text-5xl md:text-6xl lg:text-[80px] leading-[1.1]">
+          text-4xl sm:text-5xl md:text-6xl lg:text-[50px] leading-[1.1]">
             Unlock seamless
           </h1>
 
           <h2 className="font-gilroy-medium
-          text-4xl sm:text-5xl md:text-6xl lg:text-[80px] leading-[1.1]
-          bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
-          bg-clip-text text-transparent">
-            integration today
+          text-4xl sm:text-5xl md:text-6xl lg:text-[50px] leading-[1.1]
+          text-[#FF5F2D]">
+            integratiobn today
           </h2>
 
           <p className="text-gray-600 mt-6 md:mt-8 font-lufga-light max-w-md
@@ -67,7 +66,7 @@ export default function Login(){
             placeholder="Email"
             className="w-full px-4 py-3 rounded-lg
             bg-black/10 border border-black/20
-            outline-none focus:border-purple-400
+            outline-none focus:border-[#FF5F2D]
             font-gilroy-regular text-sm md:text-base"
           />
           <input
@@ -75,7 +74,7 @@ export default function Login(){
             placeholder="Password"
             className="w-full mt-4 px-4 py-3 rounded-lg
             bg-black/10 border border-black/20
-            outline-none focus:border-purple-400
+            outline-none focus:border-[#FF5F2D]
             font-gilroy-regular text-sm md:text-base"
           />
           <div className="flex justify-end mt-4 text-sm">
@@ -84,7 +83,7 @@ export default function Login(){
             </button>
           </div>
           <button className="w-full py-3 mt-6 rounded-lg
-          bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
+          bg-[#FF5F2D]
           text-white font-gilroy-regular
           hover:opacity-90 transition">
             Login
@@ -99,8 +98,7 @@ export default function Login(){
           <p className="text-center text-gray-900 text-sm mt-6 font-gilroy-regular">
             Don't have an account?
          <Link href="/Auth/Register">
-            <span className="ml-2 bg-gradient-to-r from-[#FF902F] via-[#4C11CE] to-[#723CEB]
-            bg-clip-text text-transparent cursor-pointer">
+            <span className="ml-2  text-[#FF5F2D] cursor-pointer">
               Create account
             </span>
          </Link>
@@ -109,10 +107,7 @@ export default function Login(){
         </div>
 
       </div>
-      <div className="hidden lg:flex absolute bottom-6 right-10
-      cursor-pointer hover:scale-110 transition">
-        <FaArrowRight className="w-20 h-20 text-black"/>
-      </div>
+     
 
     </div>
   )
